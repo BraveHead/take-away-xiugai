@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(241,241,241);
+    font-size: 0.28rem;
+    color: #3c3c3c;
+}
+
+.TimeContentContainer{
+    width: 100%;
+    height: 0.89rem;
+    background-color: #fafafa;
+    border-bottom: 0.01rem solid #d7d7d7;
+}
+.TimeContentTitle>i{
+    display: inline-block;
+    width: 0.18rem;
+    vertical-align: middle;
+    position: absolute;
+    left: 0.3rem;
+    top: 0.28rem;
+}
+.TimeContentTitle{
+    width: 6.9rem;
+    height: 0.83rem;
+    text-align: center;
+    line-height: 0.83rem;
+    margin: 0 auto;
+}
+.TimeContentTitle.span{
+    font-size: 0.34rem;
+}
+.TimeTypeSwitchContainer{
+    width: 100%;
+    height: 0.80rem;
+    background-color: rgb(253,353,253);
+}
+.TimeTypeSwitch{
+    width: 6.9rem;
+    height: 0.8rem;
+    margin: 0 auto;
+}
+.TimeTypeSwitchItem{
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 50%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+}
+.TimeTypeSwitchItem a{
+    padding: 0.14rem 0.1rem;
+    /*border-bottom: 0.04rem solid rgb(229,35,63);*/
+    border-bottom: 0.04rem solid rgb(253,253,253);
+}
+.TimeTypeSwitchItem a:hover{
+    cursor: pointer;
+}
+.showSwitchRed{
+    color: rgb(229,35,63);
+    border-bottom-color: rgb(229,35,63);
+}
+
+
+.TimeSwitchContext{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.TimeSwitchItem{
+    background-color: rgb(253,253,253);
+    width: 100%;
+    height: 0.83rem;
+    border-bottom: 0.01rem solid #d7d7d7;
+}
+.TimeSwitchItem span{
+    margin-left: 0.3rem;
+    line-height: 0.83rem;
+}.TimeSwitchItem time{
+    float: right;
+    margin-right: 0.3rem;
+     line-height:0.83rem;
+ }
+
+

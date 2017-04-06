@@ -1,0 +1,571 @@
+/*共有的样式*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}
+
+body {
+    max-width: 640px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 0.28rem;
+    font-family: "MicroSoft YaHei", sans-serif;
+    color: #3c3c3c;
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: 0;
+}
+
+input {
+    border: none;
+    outline: none;
+    /* 清除移动端默认的表单样式*/
+    -webkit-appearance: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/*清除浮动*/
+.clear::before,
+.clear::after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.back {
+    position: absolute;
+    top: 0.1rem;
+    left: 0;
+}
+
+.back > img {
+    width: 0.18rem;
+}
+
+.selection_mode_now {
+    color: white;
+    background-color: rgb(255, 193, 60);
+}
+
+.clear {
+    clear: both;
+}
+
+.border_bottom_gray {
+    border-bottom: 0.01rem solid rgb(215, 215, 215);
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/*精灵图样式*/
+.sprite {
+    background-image: url("../images/icon/spritesheet.png");
+    background-repeat: no-repeat;
+    display: block;
+    background-size: 9.44rem 7.99rem;
+}
+
+.sprite-Shape-1 {
+    width: 0.72rem;
+    height: 0.72rem;
+    background-position: -0.05rem -0.05rem;
+}
+
+.sprite-Shape-14-copy {
+    width: 0.16rem;
+    height: 0.22rem;
+    background-position: -0.87rem -0.05rem;
+}
+
+.sprite-Shape-2 {
+    width: 0.72rem;
+    height: 0.72rem;
+    background-position: -1.13rem -0.05rem;
+}
+
+.sprite-Shape-3 {
+    width: 0.26rem;
+    height: 0.30rem;
+    background-position: -1.95rem -0.05rem;
+}
+
+.sprite-Vector-Smart-Object {
+    width: 2.94rem;
+    height: 2.56rem;
+    background-position: -2.31rem -0.05rem;
+}
+
+.sprite-add {
+    width: 0.54rem;
+    height: 0.54rem;
+    background-position: -5.32rem -0.05rem;
+}
+
+.sprite-address_clicked {
+    width: 0.24rem;
+    height: 0.32rem;
+    background-position: -5.95rem -0.05rem;
+}
+
+.sprite-adress {
+    width: 0.36rem;
+    height: 0.36rem;
+    background-position: -6.29rem -0.05rem;
+}
+
+.sprite-advertisement {
+    width: 0.30rem;
+    height: 0.30rem;
+    background-position: -6.75rem -0.05rem;
+}
+
+.sprite-agree {
+    width: 0.26rem;
+    height: 0.26rem;
+    background-position: -7.15rem -0.05rem;
+}
+
+.sprite-back {
+    width: 0.18rem;
+    height: 0.32rem;
+    background-position: -7.15rem -0.56rem;
+}
+
+.sprite-back_gray {
+    width: 0.18rem;
+    height: 0.32rem;
+    background-position: -0.05rem -1.15rem;
+}
+
+.sprite-bianji {
+    width: 0.34rem;
+    height: 0.34rem;
+    background-position: -0.33rem -1.15rem;
+}
+
+.sprite-btn_toggle_n {
+    width: 0.87rem;
+    height: 0.52rem;
+    background-position: -5.93rem -0.51rem;
+}
+
+.sprite-btn_toggle_s {
+    width: 0.86rem;
+    height: 0.52rem;
+    background-position: -0.77rem -1.13rem;
+}
+
+.sprite-choice {
+    width: 0.30rem;
+    height: 0.30rem;
+    background-position: -1.73rem -1.15rem;
+}
+
+.sprite-clear_both {
+    width: 0.34rem;
+    height: 0.34rem;
+    background-position: -5.35rem -1.15rem;
+}
+
+.sprite-clear_item {
+    width: 0.38rem;
+    height: 0.38rem;
+    background-position: -5.79rem -1.15rem;
+}
+
+.sprite-clear_shoppingCar {
+    width: 0.34rem;
+    height: 0.34rem;
+    background-position: -6.27rem -1.15rem;
+}
+
+.sprite-clickedRound {
+    width: 0.32rem;
+    height: 0.32rem;
+    background-position: -6.71rem -1.15rem;
+}
+
+.sprite-clickedServer {
+    width: 0.38rem;
+    height: 0.37rem;
+    background-position: -7.13rem -1.15rem;
+}
+
+.sprite-clickedSquare {
+    width: 0.38rem;
+    height: 0.37rem;
+    background-position: -0.05rem -1.62rem;
+}
+
+.sprite-clickedType {
+    width: 0.51rem;
+    height: 0.50rem;
+    background-position: -6.26rem -1.62rem;
+}
+
+.sprite-close_2x {
+    width: 0.64rem;
+    height: 0.64rem;
+    background-position: -6.87rem -1.62rem;
+}
+
+.sprite-collection {
+    width: 0.40rem;
+    height: 0.64rem;
+    background-position: -0.5rem -2.36rem;
+}
+
+.sprite-collection_dark {
+    width: 0.40rem;
+    height: 0.64rem;
+    background-position: -0.55rem -2.36rem;
+}
+
+.sprite-copyLink {
+    width: 1.00rem;
+    height: 1.00rem;
+    background-position: -1.05rem -2.22rem;
+}
+
+.sprite-coupon {
+    width: 0.34rem;
+    height: 0.56rem;
+    background-position: -5.35rem -2.36rem;
+}
+
+.sprite-distribution {
+    width: 0.36rem;
+    height: 0.36rem;
+    background-position: -1.73rem -1.62rem;
+}
+
+.sprite-do_business {
+    width: 0.36rem;
+    height: 0.36rem;
+    background-position: -5.79rem -2.36rem;
+}
+
+.sprite-duigou {
+    width: 0.33rem;
+    height: 0.24rem;
+    background-position: -5.35rem -1.62rem;
+}
+
+.sprite-evaluate_background {
+    width: 7.50rem;
+    height: 1.50rem;
+    background-position: -0.05rem -3.32rem;
+}
+
+.sprite-facebook_2x {
+    width: 0.84rem;
+    height: 0.84rem;
+    background-position: -6.25rem -2.36rem;
+}
+
+.sprite-full_cut {
+    width: 0.24rem;
+    height: 0.24rem;
+    background-position: -7.19rem -2.36rem;
+}
+
+.sprite-gray_star {
+    width: 0.26rem;
+    height: 0.26rem;
+    background-position: -7.19rem -2.70rem;
+}
+
+.sprite-history_search {
+    width: 0.38rem;
+    height: 0.38rem;
+    background-position: -0.05rem -4.92rem;
+}
+
+.sprite-hot_search {
+    width: 0.38rem;
+    height: 0.38rem;
+    background-position: -0.53rem -4.92rem;
+}
+
+.sprite-logo_message {
+    width: 0.60rem;
+    height: 0.54rem;
+    background-position: -1.01rem -4.92rem;
+}
+
+.sprite-manjian {
+    width: 0.24rem;
+    height: 0.24rem;
+    background-position: -1.71rem -4.92rem;
+}
+
+.sprite-noClickedRound {
+    width: 0.32rem;
+    height: 0.32rem;
+    background-position: -2.05rem -4.92rem;
+}
+
+.sprite-noClickedServer {
+    width: 0.38rem;
+    height: 0.37rem;
+    background-position: -2.47rem -4.92rem;
+}
+
+.sprite-noClickedSquare {
+    width: 0.38rem;
+    height: 0.37rem;
+    background-position: -2.95rem -4.92rem;
+}
+
+.sprite-noClickedType {
+    width: 0.50rem;
+    height: 0.50rem;
+    background-position: -3.42rem -4.92rem;
+}
+
+.sprite-no_choice {
+    width: 0.30rem;
+    height: 0.30rem;
+    background-position: -4.03rem -4.92rem;
+}
+
+.sprite-no_collection {
+    width: 0.40rem;
+    height: 0.64rem;
+    background-position: -4.43rem -4.92rem;
+}
+
+.sprite-no_loading {
+    width: 1.20rem;
+    height: 1.20rem;
+    background-position: -4.93rem -4.92rem;
+}
+
+.sprite-no_shopping {
+    width: 1.12rem;
+    height: 1.12rem;
+    background-position: -6.23rem -4.92rem;
+}
+
+.sprite-openDown {
+    width: 0.22rem;
+    height: 0.14rem;
+    background-position: -2.15rem -3.06rem;
+}
+
+.sprite-orderClickItem {
+    width: 0.13rem;
+    height: 0.21rem;
+    background-position: -0.87rem -0.41rem;
+}
+
+.sprite-orderSettleBack {
+    width: 0.29rem;
+    height: 0.40rem;
+    background-position: -0.05rem -6.14rem;
+}
+
+.sprite-phone_number {
+    width: 0.36rem;
+    height: 0.36rem;
+    background-position: -0.44rem -6.14rem;
+}
+
+.sprite-point {
+    width: 0.36rem;
+    height: 0.36rem;
+    background-position: -0.90rem -6.14rem;
+}
+
+.sprite-qqFirends {
+    width: 1.00rem;
+    height: 1.00rem;
+    background-position: -1.36rem -6.14rem;
+}
+
+.sprite-qqFirendsHome {
+    width: 1.00rem;
+    height: 1.00rem;
+    background-position: -2.46rem -6.14rem;
+}
+
+.sprite-red_stat {
+    width: 0.40rem;
+    height: 0.64rem;
+    background-position: -3.56rem -6.14rem;
+}
+
+.sprite-reduce {
+    width: 0.55rem;
+    height: 0.54rem;
+    background-position: -4.05rem -6.13rem;
+}
+
+.sprite-remove_2x {
+    width: 0.64rem;
+    height: 0.64rem;
+    background-position: -6.23rem -6.14rem;
+}
+
+.sprite-safe_down {
+    width: 0.16rem;
+    height: 0.16rem;
+    background-position: -2.47rem -3.06rem;
+}
+
+.sprite-safe_up {
+    width: 0.16rem;
+    height: 0.16rem;
+    background-position: -2.73rem -3.06rem;
+}
+
+.sprite-search {
+    width: 0.40rem;
+    height: 0.40rem;
+    background-position: -6.97rem -6.14rem;
+}
+
+.sprite-search_gray {
+    width: 0.38rem;
+    height: 0.38rem;
+    background-position: -0.05rem -6.64rem;
+}
+
+.sprite-serverClose {
+    width: 0.24rem;
+    height: 0.24rem;
+    background-position: -0.53rem -6.64rem;
+}
+
+.sprite-serverSettingDown {
+    width: 0.22rem;
+    height: 0.14rem;
+    background-position: -2.99rem -3.06rem;
+}
+
+.sprite-share {
+    width: 0.34rem;
+    height: 0.64rem;
+    background-position: -0.87rem -6.64rem;
+}
+
+.sprite-share_dark {
+    width: 0.34rem;
+    height: 0.64rem;
+    background-position: -4.66rem -6.64rem;
+}
+
+.sprite-share_white {
+    width: 0.64rem;
+    height: 0.64rem;
+    background-position: -7.51rem -0.05rem;
+}
+
+.sprite-shoppingCar {
+    width: 1.12rem;
+    height: 1.12rem;
+    background-position: -6.97rem -6.64rem;
+}
+
+.sprite-singWibo {
+    width: 1.00rem;
+    height: 1.00rem;
+    background-position: -8.25rem -0.05rem;
+}
+
+.sprite-sort_background {
+    width: 1.48rem;
+    height: 0.84rem;
+    background-position: -7.61rem -1.15rem;
+}
+
+.sprite-sort_clicked {
+    width: 0.38rem;
+    height: 0.38rem;
+    background-position: -7.61rem -2.09rem;
+}
+
+.sprite-sort_gray {
+    width: 0.38rem;
+    height: 0.38rem;
+    background-position: -8.09rem -2.09rem;
+}
+
+.sprite-underLine {
+    width: 7.50rem;
+    height: 0.08rem;
+    background-position: -0.05rem -786rem;
+}
+
+.sprite-weChatFirendsHome {
+    width: 1.00rem;
+    height: 1.00rem;
+    background-position: -7.65rem -2.57rem;
+}
+
+.sprite-weChatFriends {
+    width: 1.00rem;
+    height: 1.00rem;
+    background-position: -7.65rem -3.67rem;
+}
+
+.sprite-weChat_2x {
+    width: 0.84rem;
+    height: 0.84rem;
+    background-position: -7.65rem -4.77rem;
+}
+
+.sprite-white_stat {
+    width: 0.64rem;
+    height: 0.64rem;
+    background-position: -8.75rem -2.09rem;
+}
+
+.sprite-wiBo {
+    width: 0.84rem;
+    height: 0.84rem;
+    background-position: -8.19rem -5.71rem;
+}
+
+.sprite-xuanzhong {
+    width: 0.68rem;
+    height: 0.68rem;
+    background-position: -8.59rem -4.77rem;
+}
+
+.sprite-yellow_star {
+    width: 0.26rem;
+    height: 0.26rem;
+    background-position: -3.31rem -2.83rem;
+}
+
+
+
+

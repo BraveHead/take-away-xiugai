@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>外卖首页列表</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <script src="js/autoSetRem.js"></script>
+</head>
+<body>
+<!--头部-->
+<div class="fixed_header">
+    <header class="switch_tab_header border_bottom_gray">
+        <div class="switch_tab_header_container">
+            <a class="back" href="#"><i class="sprite sprite-back_gray"></i></a>
+            <span class="Selection_mode">
+                <a href="#" style="border-radius:0.05rem 0 0 0.05rem">配送上门</a>
+                <a href="#" style="border-radius:0 0.05rem 0.05rem 0">到店自取</a>
+                <div class="clear"></div>
+            </span>
+            <a class="sort"><i class="sprite sprite-sort_gray"></i></a>
+            <a class="search" href="search.html"><i src="images/icon/search_gray.png" class="sprite sprite-search_gray"></i></a>
+        </div>
+    </header>
+</div>
+<!--排序选择框，默认隐藏-->
+<div class="fixed_sort">
+    <ul>
+        <li class="fixed_sort_clicked"><span><p>智能排序 <i id="sort-pic" title="sort-pic" class="sprite sprite-duigou"></i></p></span></li>
+        <li><span><p>营业状态</p></span></li>
+        <li><span><p>销量最高</p></span></li>
+        <li><span><p>距离最近</p></span></li>
+        <li><span><p>评分最高</p></span></li>
+    </ul>
+</div>
+<!--各类型下对应的商家-->
+<div class="distribution_list show">
+    <!--配送地址选择-->
+    <div class="fixed_address">
+        <div class="Delivery_address_selection border_bottom_gray">
+            <div class="Delivery_address_selection_container">
+                <a href="indexSerchAddress.html">
+                    <i class="address_clicked sprite sprite-address_clicked"></i>
+                    <span>配送到</span>
+                    <b>Sunny Bnak</b>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--餐馆类型-->
+    <div class="selection_type">
+        <div class="selection_type_scroll">
+            <div class="category in">全部</div>
+            <div class="category">品牌馆</div>
+            <div class="category">小吃快餐</div>
+            <div class="category">川香风味</div>
+            <div class="category">西式快餐</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!--餐馆类型下的餐厅列表-->
+    <div class="business_container">
+        <a class="linkToItem" href="orderPage.html">
+            <div class="business_list_container">
+                <div class="business_list">
+                    <div class="business_list_item">
+                        <div class="business_list_item_left">
+                            <div class="business_list_item_left_container">
+                                <img src="images/fill/food_pic.png"/>
+                                <span>可预订</span>
+                            </div>
+                        </div>
+                        <div class="business_list_item_right">
+                            <div class="business_list_item_right_container">
+                                <b>全部</b>
+                                <span class="score">4.5</span>
+                                <p class="business_name">MOOROOKA</p>
+                                <span class="business_address">India,Iceream,Indian,Ice,Indian,Icecrlcecream</span>
+                                <p class="business_talk">1234条点评</p>
+                                <span class="business_length">3.2km</span>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="linkToItem" href="orderPage.html">
+            <div class="business_list_container">
+                <div class="business_list">
+                    <div class="business_list_item">
+                        <div class="business_list_item_left">
+                            <div class="business_list_item_left_container">
+                                <img src="images/fill/food_pic.png"/>
+                                <span class="food_now">现可配送</span>
+                            </div>
+                        </div>
+                        <div class="business_list_item_right">
+                            <div class="business_list_item_right_container">
+                                <b class>布里斯班海鲜餐厅栖岸餐厅...</b>
+                                <span class="score">4.5</span>
+                                <p class="business_name">MOOROOKA</p>
+                                <span class="business_address">India,Iceream,Indian,Ice,Indian,Icecrlcecream</span>
+                                <p class="business_talk">1234条点评</p>
+                                <span class="business_length">3.2km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a class="linkToItem" href="orderPage.html">
+            <div class="business_list_container">
+                <div class="business_list">
+                    <div class="business_list_item">
+                        <div class="business_list_item_left">
+                            <div class="business_list_item_left_container">
+                                <img src="images/fill/food_pic.png"/>
+                                <span class="food_later">今日不营业</span>
+                            </div>
+                        </div>
+                        <div class="business_list_item_right">
+                            <div class="business_list_item_right_container">
+                                <b class>布里斯班海鲜餐厅栖岸餐厅...</b>
+                                <span class="score">4.5</span>
+                                <p class="business_name">MOOROOKA</p>
+                                <span class="business_address">India,Iceream,Indian,Ice,Indian,Icecrlcecream</span>
+                                <p class="business_talk">1234条点评</p>
+                                <span class="business_length">3.2km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a class="linkToItem" href="orderPage.html">
+            <div class="business_list_container">
+                <div class="business_list">
+                    <div class="business_list_item">
+                        <div class="business_list_item_left">
+                            <div class="business_list_item_left_container">
+                                <img src="images/fill/food_pic.png"/>
+                                <span>可预订</span>
+                            </div>
+                        </div>
+                        <div class="business_list_item_right">
+                            <div class="business_list_item_right_container">
+                                <b class>布里斯班海鲜餐厅栖岸餐厅...</b>
+                                <span class="score">4.5</span>
+                                <p class="business_name">MOOROOKA</p>
+                                <span class="business_address">India,Iceream,Indian,Ice,Indian,Icecrlcecream</span>
+                                <p class="business_talk">1234条点评</p>
+                                <span class="business_length">3.2km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a class="linkToItem" href="orderPage.html">
+            <div class="business_list_container">
+                <div class="business_list">
+                    <div class="business_list_item">
+                        <div class="business_list_item_left">
+                            <div class="business_list_item_left_container">
+                                <img src="images/fill/food_pic.png"/>
+                                <span>可预订</span>
+                            </div>
+                        </div>
+                        <div class="business_list_item_right">
+                            <div class="business_list_item_right_container">
+                                <b class>布里斯班海鲜餐厅栖岸餐厅...</b>
+                                <span class="score">4.5</span>
+                                <p class="business_name">MOOROOKA</p>
+                                <span class="business_address">India,Iceream,Indian,Ice,Indian,Icecrlcecream</span>
+                                <p class="business_talk">1234条点评</p>
+                                <span class="business_length">3.2km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a class="linkToItem" href="orderPage.html">
+            <div class="business_list_container">
+                <div class="business_list">
+                    <div class="business_list_item">
+                        <div class="business_list_item_left">
+                            <div class="business_list_item_left_container">
+                                <img src="images/fill/food_pic.png"/>
+                                <span>可预订</span>
+                            </div>
+                        </div>
+                        <div class="business_list_item_right">
+                            <div class="business_list_item_right_container">
+                                <b class>布里斯班海鲜餐厅栖岸餐厅...</b>
+                                <span class="score">4.5</span>
+                                <p class="business_name">MOOROOKA</p>
+                                <span class="business_address">India,Iceream,Indian,Ice,Indian,Icecrlcecream</span>
+                                <p class="business_talk">1234条点评</p>
+                                <span class="business_length">3.2km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="index-beijing"></div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,415 @@
+/*外卖首页列表*/
+
+/*html{
+    font-size: 100px;
+}*/
+body{
+    background-color: #f1f1f1;
+}
+
+/*切换首页列表状态*/
+.fixed_header{
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    max-width: 640px;
+}
+.switch_tab_header{
+    background-color: rgb(255,255,255);
+    height: 0.89rem;
+    top: 0;
+    border-bottom: 0.01rem solid #d7d7d7;
+}
+.Selection_mode{
+    display:inline-block;
+    width: 3.51rem;
+    height: 0.58rem;
+    border:1px solid rgb(255,193,60);
+    border-radius: 0.1rem;
+    position: absolute;
+    top:0;
+    left: 1.7rem;
+}
+.switch_tab_header_container{
+     width: 6.9rem;
+     height: 0.54rem;
+     position: relative;
+     top:0.15rem ;
+     margin:0 auto;
+ }
+.Selection_mode>a{
+    font-size: 0.30rem;
+    font-weight: bold;
+    color: rgb(255,193,60);
+    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    line-height: 0.56rem;
+}
+
+.Selection_mode>a:hover{
+    cursor: pointer;
+}
+.sort{
+    position: absolute;
+    top:0.1rem;
+    right: 0.60rem;
+}
+.sort>img{
+    width: 0.38rem;
+}
+
+.search{
+    position: absolute;
+    top:0.1rem;
+    right: 0;
+}
+.search>img{
+    width: 0.38rem;
+}
+.distribution_list{
+    display: none;
+}
+
+/*选择排序方式*/
+.fixed_sort{
+    position: fixed;
+    top: 0.89rem;
+    z-index: 99;
+    background-color: #ffffff;
+    display: none;
+    max-width: 640px;
+}
+.fixed_sort li{
+    display: inline-block;
+    width:100%;
+    max-width: 640px;
+    height: 0.9rem;
+    margin: 0 auto;
+    border-bottom: 0.01rem solid #d7d7d7;
+    font-size: 0.28rem;
+    color: #3c3c3c;
+}
+.fixed_sort li>span{
+    display: block;
+    width: 6.62rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    margin-left: 0.44rem;
+    margin-right: 0.44rem;
+}
+.fixed_sort>li:hover{
+    cursor: pointer;
+}
+.fixed_sort ul .fixed_sort_clicked{
+    color: #FFC13C;
+}
+.fixed_sort i{
+    display: inline-block;
+    width: 0.33rem;
+    float: right;
+    margin-top: 0.33rem;
+}
+
+
+
+/*配送地址选择栏*/
+.fixed_address{
+    position: fixed;
+    top:0.89rem;
+    z-index: 5;
+    width: 100%;
+    max-width: 640px;
+}
+.Delivery_address_selection{
+    background-color: rgb(255,255,255);
+    height: 0.84rem;
+    overflow: hidden;
+    text-align: center;
+    border-bottom:0.01rem solid #d7d7d7;
+}
+.Delivery_address_selection_container{
+    /*position: relative;*/
+    display: inline-block;
+    width: 4.5rem;
+    height: 0.3rem;
+    margin-top: 0.20rem;
+}
+.address_clicked{
+    height: 0.32rem;
+   display: inline-block;
+    vertical-align: middle;
+
+}
+.Delivery_address_selection span{
+    font-size: 0.28rem;
+    /*position: absolute;*/
+    /*top: 0.26rem;*/
+    /*left: 0.48rem;*/
+    vertical-align: middle;
+    color: rgb(137,137,137);
+}
+.Delivery_address_selection_container b{
+    font-size:0.32rem;
+    vertical-align: middle;
+    color: #3c3c3c;
+    font-weight: 500;
+}
+/*商家种类*/
+.selection_type{
+    font-size: 0.28rem;
+    position: relative;
+    align-items:center;
+    height: 0.84rem;
+    background-color: #fff;
+    margin-top: 1.73rem;
+    max-width: 640px;
+    overflow:auto;
+    overflow-y: hidden;
+}
+    .selection_type_scroll{
+        position: absolute;
+        width: 8.5rem;
+        /*height: 0.61rem;*/
+    }
+    .category{
+        float: left;
+        padding-top:0.16rem;
+        padding-bottom:0.08rem;
+        margin: 0 0.32rem;
+        margin-top: 0.04rem;
+        color: #777777;
+        border-bottom: 0.04rem solid #fff;
+        cursor: pointer;
+    }
+
+    .in{
+        color:red;
+        border-bottom-color: red;
+    }
+    .category:nth-child(1){
+        margin-left:0.43rem ;
+    }
+
+/*商家列表*/
+.business_container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.business_list_container{
+    background-color: rgb(255,255,255);
+    width: 100%;
+    padding: 0.2rem 0;
+    border-bottom: 0.01rem solid #d7d7d7;
+    margin-top:0.20rem;
+    padding-bottom:0.20rem;
+}
+    .business_list{
+
+        width: 100%;
+    }
+    .business_list_item{
+        width: 6.9rem;
+        height: 1.74rem;
+        margin: 0 0.3rem;
+        overflow: hidden;
+    }
+    /*左边图像*/
+    .business_list_item_left{
+        width: 2.1rem;
+        height: 1.74rem;
+        float:left;
+    }
+    .business_list_item_left_container{
+        width: 2.1rem;
+        height: 1.74rem;
+        position: absolute;
+    }
+    .business_list_item_left img{
+        width: 2.1rem;
+        height: 1.40rem;
+        position: absolute;
+    }
+    .business_list_item_left span{
+        position: absolute;
+        display: inline-block;
+        width: 2.1rem;
+        top: 1.40rem;
+        height: 0.34rem;
+        font-size:0.24rem;
+        background-color: rgb(255,140,83);
+        text-align: center;
+        line-height: 0.34rem;
+        color: rgb(255,255,255);
+    }
+    
+    /*右边商品参数*/
+.business_list_item_right{
+    float: left;
+    margin-left:0.2rem;
+    width: 4.6rem;
+    height: 100%;
+}
+    .business_list_item_right_container{
+        position: relative;
+        width: 4.6rem;
+        height: 1.76rem;
+    }
+    .business_list_item_right_container b{
+        position: absolute;
+        width: 3.3rem;
+        top: 0.06rem;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        color: #3c3c3c;
+        font-weight: 600;
+    }
+    .score{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0.7rem;
+        height: 0.5rem;
+        background-color:rgb(255,126,126);
+        text-align: center;
+        line-height: 0.5rem;
+        font-size: 0.32rem;
+        color: white;
+        border-radius: 0.04rem;
+    }
+    .business_address{
+        width: 3.3rem;
+        position: absolute;
+        font-size:0.24rem;
+        word-wrap: break-word;/*自动换行*/
+        word-break: normal;
+        top:0.80rem;
+        color: #777777;
+    }
+    .business_name{
+        font-size: 0.24rem;
+        top: 0.50rem;
+        position: absolute;
+        color: #777777;
+    }
+    .business_talk{
+        position:absolute;
+        font-size:0.24rem;
+        top:1.44rem;
+        color: #777777;
+    }
+    .business_length{
+        position: absolute;
+        font-size: 0.28rem;
+        top:1.42rem;
+        left: 3.8rem;
+        color: #3c3c3c;
+    }
+    .show{
+        display: block;
+    }
+    .business_list_item_left .food_now{
+        background-color: rgb(101,198,45);
+    }
+    .business_list_item_left .food_later{
+        background-color: #ff373e;
+    }
+    .linkToItem{
+        display: block;
+        width: 100%;
+        height: 2.15rem;
+        background-color: #f1f1f1;
+    }
+
+/*搜索地址*/
+.peiSongQuYu{
+    position: absolute;
+    color: rgb(60,60,60);
+    left:2.80rem;
+    top: 0.15rem;
+    font-size: 0.34rem;
+}
+.searchInputCheck{
+    font-size: 0.28rem;
+    color: #777777;
+    height: 0.40rem;
+}
+.searchAddressContainer{
+    position: relative;
+    width: 100%;
+    top: 0.90rem;
+    height: auto;
+}
+.searchInputItem{
+    height: 0.90rem;
+    border-bottom: 1px solid #d7d7d7;
+    text-align: left;
+    line-height: 0.90rem;
+}
+.searchInputItem>div{
+    width: 6.9rem;
+    height: 0.9rem;
+    margin: 0 auto;
+}
+.searchInputContainer{
+    background-color: #fff;
+    line-height: 0.90rem;
+}
+.searchInputContainer img{
+    width: 0.40rem;
+    vertical-align: middle;
+    margin-left: 0.20rem;
+}
+.searchInputContainer input{
+    vertical-align: middle;
+    border: none;
+    outline: none;
+}
+.ShowSearchAddress{
+    height: 11.50rem;
+    text-align: center;
+}
+.daXiang{
+    margin-top: 2.50rem;
+    width: 2.94rem;
+}
+.ShowSearchAddress>p{
+    margin-top: 0.44rem;
+    color: rgb(232,84,106);
+}
+.ShowSearchAddress>h5{
+    margin-top: 0.30rem;
+    font-size: 0.28rem;
+    color: rgb(83,83,83);
+    font-weight: 700;
+}
+.index-beijing{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    max-width: 640px;
+    width: 100%;
+    display: none;
+    background-color:#000;
+    filter:alpha(opacity=60);  /*设置透明度为60%*/
+    opacity:0.6;  /*非IE浏览器下设置透明度为60%*/
+}
+
+
+
+
+
+
+
+
+
+
+
+

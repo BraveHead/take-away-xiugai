@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/loading.css" type="text/css"/>
+    <script src="js/autoSetRem.js"></script>
+</head>
+<body>
+<div class="loadingHeaderContainer">
+    <div class="loadingHeader">
+        <a href="orderSettlement.html" id="loadingClose">
+            <img src="images/icon/close@2x.png"/>
+        </a>
+        <b>账号登录</b>
+        <a href="register.html">注册</a>
+    </div>
+</div>
+
+<div class="loadingContentContainer">
+    <div class="loadingContent">
+        <div class="third_party_login">
+            <div class="wiBoContainer">
+                <a href="#"><img src="images/icon/wiBo.png" class="third_party_loginPic"/></a>
+                <p>新浪微博</p>
+            </div>
+            <div class="weChatContainer">
+                <a href="#"><img src="images/icon/weChat@2x.png" class="third_party_loginPic"/></a>
+                <p>微信</p>
+            </div>
+            <div class="faceBookContainer">
+                <a href="#"><img src="images/icon/facebook@2x.png" class="third_party_loginPic"/></a>
+                <p>FaceBook</p>
+            </div>
+        </div>
+    </div>
+    <div class="or">or</div>
+    <form action="orderSettlement.html" method="post" class="loadingForm">
+        <input type="text" placeholder=" Email或手机号码" required="required" class="ema-pho"/>
+        <input type="password" placeholder=" 密码(数字与字母组合的8-16位密码)" required="required" class="password"/>
+        <button type="submit" class="loadingSubmit" id="loading-check">登录</button>
+        <a href="forgetPassword.html" class="forgetPassword">忘记密码？</a>
+    </form>
+</div>
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/loading.js"></script>
+</html>

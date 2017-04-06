@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable='no'">
+    <title>添加地址信息</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/orderSettlement.css" type="text/css"/>
+    <script src="js/autoSetRem.js"></script>
+</head>
+<body>
+<div class="orderSettleHeaderContainer itemContainer">
+    <div class="orderSettleHeader item">
+        <i class="orderSettleBack sprite sprite-back_gray"></i>
+        <span>添加地址信息</span>
+        <a class="addNewAddress">保存</a>
+    </div>
+</div>
+
+<div class="addAddressFormContainer">
+    <form id="saveNewAddressForm">
+        <input type="text" placeholder="姓"/>
+        <input type="text" placeholder="名"/>
+
+        <input type="text" value="43 Moola Road" placeholder="街道"/>
+        <input type="text" value="Ashgrove" placeholder="地区"/>
+        <label style="position: relative;">
+            <input type="text" value="州" class="zhouList"/>
+            <i class="sprite sprite-openDown" style="position: absolute;left: 6.78rem;top:0.20rem;display:inline-block;"></i>
+        </label>
+
+        <input type="text" value="4060" placeholder="邮编"/>
+
+        <input type="email" placeholder="Email"/>
+        <input type="text" placeholder="手机号"/>
+    </form>
+</div>
+
+
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/orderSettle.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>商家评价界面</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/orderPage.css" type="text/css"/>
+    <style>
+        body{
+            background-color: #f1f1f1;
+        }
+    </style>
+    <script src="js/autoSetRem.js"></script>
+</head>
+<body>
+
+<div class="new">
+    <header class="order_food_header">
+        <div class="order_header_nav">
+            <i class="order_back sprite sprite-back"></i>
+            <span class="businessItemName" style="color: #3c3c3c;">蜀香坊</span>
+            <img class="order_collection" src="images/icon/no_collection.png"/>
+            <i class="order_share sprite sprite-share"></i>
+        </div>
+    </header>
+    <div class="order_container">
+        <div class="order_header_message_container">
+            <div class="order_header_message">
+                <div class="order_header_message_left">
+                    <img src="images/fill/business_header_pic.png"/>
+                </div>
+                <div class="order_header_message_right">
+                    <div class="order_message_name">满减特约-蜀香坊-City</div>
+                    <div class="order_message_type">中餐，西餐，四川，日餐，韩餐，冰激凌</div>
+                    <div class='order_message_safe'>
+                        <i class="safe_logo sprite sprite-manjian"></i>
+                        <span class="safe_message">满30减25， 满60减55， 满90减70</span>
+                        <span class="safe_more">2个活动 <i class="sprite sprite-safe_down"></i></span>
+                    </div>
+                    <div class="order_message_safe_hidden">
+                        <i class="safe_logo sprite sprite-manjian"></i>
+                        <p>新用户第一次下单立减20</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--滚动广播-->
+        <div class="scroll_text">
+            <div class="scroll_text_container">
+                <i class="sprite sprite-advertisement"></i>
+                <marquee>下大雨了，帅的司机都没了，为了你们的幸福，不开店了！</marquee>
+            </div>
+        </div>
+        <!--商家模块的切换-->
+        <div class="food_list_container">
+            <div class="business_module_container" id="contrast">
+                <a href="orderPage.html" class="module_list"><span class="module_list_default">点菜</span></a>
+                <a href="orderPagePingjia.html" class="module_list"><span class="module_list_default showBottomRed">评价</span></a>
+                <a href="orderPageShangjia.html" class="module_list"><span class="module_list_default">商家</span></a>
+            </div>
+            <!--评价-->
+            <div class="swiper-slide" style="overflow-y: scroll;">
+                <div>
+                    <div class="evaluate_background sprite sprite-evaluate_background">
+                        <div>
+                            <div class="evaluate_sort sprite sprite-sort_background"><b>4</b><span>.5</span></div>
+                            <p class="evaluate_number">1174外卖用户评价</p>
+                        </div>
+                    </div>
+                    <div class="choice_evaluate">
+                        <div class="choice_evaluate_container">
+                            <i class="sprite sprite-no_choice"></i>
+                            <span>只显示有文字评论的内容</span>
+                        </div>
+                    </div>
+                    <div class="evaluate_content">
+                        <div>
+                            <!--用户评价-->
+                            <div class="evaluate_content_container">
+                                <div class="eva-height">
+                                    <div class="evaluate_context_left">
+                                        <img src="images/fill/header_pic.png"/>
+                                    </div>
+                                    <div class="evaluate_context_right">
+                                        <div class="customer_id">
+                                            <b>不是乌贝拉</b>
+                                            <span>
+                                                <i class="sprite sprite-yellow_star"></i><i class="sprite sprite-yellow_star">
+                                            </i><i class="sprite sprite-yellow_star"></i><i class="sprite sprite-yellow_star">
+                                            </i><i class="sprite sprite-yellow_star"></i>
+                                    </span>
+                                        </div>
+                                        <div class="context_message">
+                                    <span>
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                    </span>
+                                            <time>2017-01-08 08:50</time>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+
+                            <!--用户评价-->
+                            <div class="evaluate_content_container">
+                                <div>
+                                    <div class="evaluate_context_left">
+                                        <img src="images/fill/header_pic.png"/>
+                                    </div>
+                                    <div class="evaluate_context_right">
+                                        <div class="customer_id">
+                                            <b>不是乌贝拉</b>
+                                            <span>
+                                        <i class="sprite sprite-yellow_star"></i><i class="sprite sprite-yellow_star">
+                                            </i><i class="sprite sprite-yellow_star"></i><i class="sprite sprite-yellow_star">
+                                            </i><i class="sprite sprite-gray_star"></i>
+                                    </span>
+                                        </div>
+                                        <div class="context_message">
+                                    <span>
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                    </span>
+                                            <time>2017-01-08 08:50</time>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="evaluate_content evaluate_content_bus">
+                                <!--商家回复-->
+                                <div class="evaluate_content_container">
+                                    <div>
+                                        <div class="evaluate_context">
+                                            <div class="evaluate_context_left business_evaluate_left">
+                                                <img src="images/fill/header_pic.png"/>
+                                            </div>
+                                            <div class="evaluate_context_right business_evaluate_right">
+                                                <div class="customer_id">
+                                                    <b>不是乌贝拉</b>
+                                                    <time>2017-01-08 08:50</time>
+                                                </div>
+                                                <div class="context_message">
+                                                <span>
+                                                    不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉
+                                                    不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,
+                                                    不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                                    不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                                </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--阴影背景-->
+<div class="serverSettingContainer"></div>
+<!--点击分享-->
+    <div class="ShareListContainer">
+        <a href="#"><i class="sprite sprite-qqFirends"></i><p>QQ好友</p></a>
+        <a href="#"><i class="sprite sprite-qqFirendsHome"></i><p>QQ空间</p></a>
+        <a href="#"><i class="sprite sprite-weChatFriends"></i><p>微信好友</p></a>
+        <a href="#"><i class="sprite sprite-weChatFirendsHome"></i><p>微信朋友圈</p></a>
+        <a href="#"><i class="sprite sprite-singWibo"></i><p>新浪微博</p></a>
+        <a href="#"><i class="sprite sprite-copyLink"></i><p>复制链接</p></a>
+        <div>取消</div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    (function () {
+        /*动态给评论列表添加高度*/
+        var showEvaHeight = $('.evaluate_content').outerHeight(true);
+        var bgcHeight = $(".evaluate_background").outerHeight(true);
+        var choiceHeight = $(".choice_evaluate").outerHeight(true);
+        var eva = $('.evaluate_content_container');
+        var evaHeight = 0;
+        var busiHeight = 0;
+        var busi = $(".evaluate_content_bus");
+        let arrStat = ['images/icon/no_collection.png','images/icon/collection.png'],
+            arrStatCopy = ['images/icon/collection_dark.png',"images/icon/red_stat.png"],
+            shareArr = ['order_share sprite sprite-share',"order_share sprite sprite-share_dark"],
+            backArr = ['order_back sprite sprite-back','order_back sprite sprite-back_gray'];
+        var storage = window.sessionStorage;
+
+        for(let i = 0; i < eva.length; i ++){
+            evaHeight += eva.eq(i).outerHeight(true);
+        }
+        for(let i = 0 ;i< busi.length; i ++){
+            busiHeight += busi.eq(i).outerHeight(true);
+        }
+        $(".swiper-slide").css("height",showEvaHeight);
+        $('.swiper-slide>div').css({
+            "height":bgcHeight + evaHeight + busiHeight + choiceHeight+
+            $(".business_module_container").height() + $(".order_food_header").height() +"px",
+            "overflow":"scroll"
+        });
+        $(".new").css("left",($(document).width() - $("body").width())/2 + "px");
+        /*评论模块*/
+        $(".choice_evaluate_container>i").on('click',function (e) {
+            if($('.choice_evaluate_container>i').attr("class") == "sprite sprite-choice"){
+                $('.choice_evaluate_container>i').attr("class","sprite sprite-no_choice");
+            }else{
+                $('.choice_evaluate_container>i').attr("class","sprite sprite-choice");
+            }
+        });
+
+        $(".evaluate_context_right img").on('click',function (e) {
+            let nowIndex = $(".evaluate_context_right img").index(this);
+            $(".evaluate_context_right img").attr('src',"Pictures/Pic/evaluate/gray_star.png");
+            for(let i = 0; i < nowIndex; i ++){
+                $(".evaluate_context_right img").eq(i).attr('src',"Pictures/Pic/evaluate/yellow_star.png");
+            }
+        });
+
+        /* 监听页面容器的滚动，产生变化, 和common中的函数一起起效果*/
+        function listenScrollBox() {
+            var newOne = document.querySelectorAll(".new");
+            var newScrollTop;
+            newOne[0].addEventListener('scroll',function (e) {
+//                $(".order_container").css("height",newHeight);
+                newScrollTop = newOne[0].scrollTop;
+                if(newScrollTop >= 20){
+                    $('.order_food_header').addClass('headerTransform');
+                    $('.order_back').attr('class',backArr[1]);
+                    if( $('.order_collection').attr('src') == arrStat[1]){
+                        $('.order_collection').attr('src',arrStatCopy[1]);
+                    }else{
+                        $('.order_collection').attr('src',arrStatCopy[0]);
+                    }
+                    $('.order_header_message_container').addClass('headerTransform showTransformHidden');
+                    $('.businessItemName').css({'display':'block','color':'#3c3c3c'});
+                    $('.order_share').attr("class",shareArr[1]);
+                }else{
+                    $('.order_share').attr("class",shareArr[0]);
+                    $('.order_food_header').removeClass("headerTransform");
+                    if($('.order_collection').attr('src') == arrStatCopy[1]){
+                        $('.order_collection').attr('src',arrStat[1]);
+                    }else{
+                        $('.order_collection').attr('src',arrStat[0]);
+                    }
+                    $('.order_back').attr('class',backArr[0]);
+                    $('.order_header_message_container').removeClass('headerTransform showTransformHidden');
+                    $('.businessItemName').css({'display':'none','color':'#3c3c3c'});
+                }
+
+            });
+        }
+        listenScrollBox();
+    })()
+</script>
+</html>

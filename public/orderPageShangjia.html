@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>商家点菜界面</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/orderPage.css" type="text/css"/>
+    <script src="js/autoSetRem.js"></script>
+</head>
+<body>
+
+<div class="new">
+    <header class="order_food_header">
+        <div class="order_header_nav">
+            <i class="order_back sprite sprite-back"></i>
+            <span class="businessItemName" style="color: #3c3c3c;">蜀香坊</span>
+            <img class="order_collection" src="images/icon/no_collection.png"/>
+            <i class="order_share sprite sprite-share"></i>
+        </div>
+    </header>
+    <div class="order_container">
+        <div class="order_header_message_container">
+            <div class="order_header_message">
+                <div class="order_header_message_left">
+                    <img src="images/fill/business_header_pic.png"/>
+                </div>
+                <div class="order_header_message_right">
+                    <div class="order_message_name">满减特约-蜀香坊-City</div>
+                    <div class="order_message_type">中餐，西餐，四川，日餐，韩餐，冰激凌</div>
+                    <div class='order_message_safe'>
+                        <i class="safe_logo sprite sprite-manjian"></i>
+                        <span class="safe_message">满30减25， 满60减55， 满90减70</span>
+                        <span class="safe_more">2个活动 <i class="sprite sprite-safe_down"></i></span>
+                    </div>
+                    <div class="order_message_safe_hidden">
+                        <i class="safe_logo sprite sprite-manjian"></i>
+                        <p>新用户第一次下单立减20</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--滚动广播-->
+        <div class="scroll_text">
+            <div class="scroll_text_container">
+                <i class="sprite sprite-advertisement"></i>
+                <marquee>下大雨了，帅的司机都没了，为了你们的幸福，不开店了！</marquee>
+            </div>
+        </div>
+        <!--商家模块的切换-->
+        <div class="food_list_container">
+            <div class="business_module_container" id="contrast">
+                <a href="orderPage.html" class="module_list"><span class="module_list_default">点菜</span></a>
+                <a href="orderPagePingjia.html" class="module_list"><span class="module_list_default">评价</span></a>
+                <a href="#" class="module_list"><span class="module_list_default showBottomRed">商家</span></a>
+            </div>
+            <!--商家详情-->
+            <div class="shangjia">
+                    <div class="business_content">
+                        <!--logo-->
+                        <div class="business_center_logo_container">
+                            <div class="business_center_logo">
+                                <a class="logo_message">
+                                    <i class="sprite sprite-logo_message"></i>
+                                    <span>查看店铺详情</span>
+                                </a>
+                                <div class="describe_logo">
+                                    <div class="div-line1"></div>
+                                    <span>进入店铺详情可查看更多的到店点评</span>
+                                    <div class="div-line2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--phone-->
+                        <div class="same_type_container">
+                            <div class="same_type">
+                                <p>
+                                    <i class="phone_number sprite sprite-phone_number"></i>
+                                    <span>1322 120 332</span>
+                                    <i class="point sprite sprite-point"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <!--地址-->
+                        <div class="same_type_container dif_type_container">
+                            <div class="same_type">
+                                <p>
+                                    <i class="phone_number sprite sprite-adress"></i>
+                                    <span>6/123 Muriel Ave, Moorooka QLD 4105 </span>
+                                    <i class="point sprite sprite-point"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <!--配送时间-->
+                        <a class="same_type_container dif_type_container peisong" href="workingTime.html">
+                            <div class="same_type">
+                                <p>
+                                    <i class="phone_number sprite sprite-distribution"></i>
+                                    <span>配送时间: 08:00-22:00</span>
+                                    <i class="point sprite sprite-point"></i>
+                                </p>
+                            </div>
+                        </a>
+                        <!--营业时间-->
+                        <a class="same_type_container dif_type_container yinye" href="workingTime.html">
+                            <div class="same_type">
+                                <p>
+                                    <i class="phone_number sprite sprite-do_business"></i>
+                                    <span>营业时间: 08:00-22:30</span>
+                                    <i class="point sprite sprite-point"></i>
+                                </p>
+                            </div>
+                        </a>
+
+                        <!--商家优惠信息-->
+                        <div class="business_sale_message_container">
+                            <div class="business_sale_message">
+                                <p class="business_server">商家优惠与服务</p>
+                                <p class="business_server_message">
+                                    <i class="sprite sprite-full_cut"></i>
+                                    <span>满30减25，满50减30，满70减35，满90减50</span>
+                                </p>
+                                <p class="business_server_message">
+                                    <i class="sprite sprite-full_cut"></i>
+                                    <span>新用户立减30</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<!--阴影背景-->
+<div class="serverSettingContainer"></div>
+<!--点击分享-->
+<div class="ShareListContainer">
+    <a href="#"><i class="sprite sprite-qqFirends"></i><p>QQ好友</p></a>
+    <a href="#"><i class="sprite sprite-qqFirendsHome"></i><p>QQ空间</p></a>
+    <a href="#"><i class="sprite sprite-weChatFriends"></i><p>微信好友</p></a>
+    <a href="#"><i class="sprite sprite-weChatFirendsHome"></i><p>微信朋友圈</p></a>
+    <a href="#"><i class="sprite sprite-singWibo"></i><p>新浪微博</p></a>
+    <a href="#"><i class="sprite sprite-copyLink"></i><p>复制链接</p></a>
+    <div>取消</div>
+</div>
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    (function () {
+        let arrStat = ['images/icon/no_collection.png','images/icon/collection.png'],
+            arrStatCopy = ['images/icon/collection_dark.png',"images/icon/red_stat.png"],
+            shareArr = ['order_share sprite sprite-share',"order_share sprite sprite-share_dark"],
+            backArr = ['order_back sprite sprite-back','order_back sprite sprite-back_gray'];
+        var storage = window.sessionStorage;
+
+        $(".new").css({
+            "left":($(document).width() - $("body").width())/2 + "px"
+        })
+        /*商家模块的事件*/
+        var storage = window.sessionStorage;
+        $('.peisong').on('click',function () {
+            storage.setItem("timeNum",1);
+        });
+        $('.yinye').on('click',function () {
+            storage.setItem('timeNum',0);
+        });
+
+        /* 监听页面容器的滚动，产生变化和common函数中的scroll一起起效果*/
+        function listenScrollBox() {
+            var newOne = document.querySelectorAll(".new");
+            var newScrollTop;
+            newOne[0].addEventListener('scroll',function (e) {
+
+                newScrollTop = newOne[0].scrollTop;
+                if(newScrollTop >= 20){
+                    $('.order_food_header').addClass('headerTransform');
+                    $('.order_back').attr('class',backArr[1]);
+                    if( $('.order_collection').attr('src') == arrStat[1]){
+                        $('.order_collection').attr('src',arrStatCopy[1]);
+                    }else{
+                        $('.order_collection').attr('src',arrStatCopy[0]);
+                    }
+                    $('.order_header_message_container').addClass('headerTransform showTransformHidden');
+                    $('.businessItemName').css({'display':'block','color':'#3c3c3c'});
+                    $('.order_share').attr("class",shareArr[1]);
+                }else{
+                    $('.order_share').attr("class",shareArr[0]);
+                    $('.order_food_header').removeClass("headerTransform");
+                    if($('.order_collection').attr('src') == arrStatCopy[1]){
+                        $('.order_collection').attr('src',arrStat[1]);
+                    }else{
+                        $('.order_collection').attr('src',arrStat[0]);
+                    }
+                    $('.order_back').attr('class',backArr[0]);
+                    $('.order_header_message_container').removeClass('headerTransform showTransformHidden');
+                    $('.businessItemName').css({'display':'none','color':'#3c3c3c'});
+                }
+
+            });
+        }
+        listenScrollBox();
+    })()
+</script>
+</html>
