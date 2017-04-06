@@ -96,4 +96,33 @@
             hidden = true;
         }
     });
+    /*pc端的nav的拖动兼容性处理*/
+    function navDragPc() {
+        let parent = document.getElementsByClassName("selection_type")[0];
+        let navSon = document.getElementsByClassName("selection_type_scroll")[0];
+        let disX = 0,beginClickX;
+        let maxLeft = $(".selection_type_scroll").width() - $(".selection_type").width();
+        console.log(maxLeft);
+        navSon.onmousedown = function (e) {
+            let event = window.e || e;
+            beginClickX = event.clientX - navSon.offsetLeft;
+            console.log(beginClickX);
+            navSon.onmousemove = function (e) {
+                let mEvent = window.e || e;
+                disX = mEvent.clientX - beginClickX;
+                if(disX > maxLeft){
+                    disX = maxLeft;
+                }else if(disX < -maxLeft){
+                    disX = -maxLeft;
+                }
+                navSon.style.left = disX + "px";
+            };
+            document.onmouseup = function (e) {
+                navSon.onmousemove = null;
+                document.onmouseup = null;
+            }
+        }
+    }
+    navDragPc();
+
 })();
