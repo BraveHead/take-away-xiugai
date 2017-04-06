@@ -906,7 +906,7 @@ marquee{
 .sku-food-container{
     width: 100%;
     height: 2.05rem;
-    margin-top: 0.02rem;
+    border-top: 0.01rem solid #d7d7d7;
     background-color: #fff;
 }
 .sku-food-content{
@@ -957,12 +957,11 @@ marquee{
 }
 .flavor-container{
     width: 100%;
-    margin-top: 0.02rem;
 }
 .flavor-item{
     width: 100%;
     height: 0.87rem;
-    margin-top: 0.02rem;
+    border-top: 0.01rem solid #d7d7d7;
     line-height: 0.87rem;
     background-color: #fff;
 }

@@ -4,7 +4,7 @@
 (function () {
 
     /*返回上一页*/
-    function order-settle-back() {
+    function orderSettleBack() {
         $('.order-settle-back').on('click',function (e) {
             window.history.back();
         })
@@ -93,7 +93,7 @@
     }
 
     function init() {
-        order-settle-back();//返回上一页
+        orderSettleBack();//返回上一页
         choiceAddress();//选择地址
         choicePayType();//选择不同的支付方式
         clickedToggle();//选择优惠是否
