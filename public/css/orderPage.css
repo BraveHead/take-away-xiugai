@@ -681,7 +681,7 @@ marquee{
     position: fixed;
     bottom: 0;
     height: 0.97rem;
-    z-index: 10;
+    z-index: 8;
     background-color: #fff;
     border-top: 0.01rem solid #d7d7d7;
 }
@@ -741,7 +741,7 @@ marquee{
     top:0;
     background-color:#000;
     width:100%;  /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
-    height: 10.0rem;
+    max-width: 640px;
     filter:alpha(opacity=60);  /*设置透明度为60%*/
     opacity:0.6;  /*非IE浏览器下设置透明度为60%*/
     display:none; /*  */
@@ -754,6 +754,7 @@ marquee{
     background-color: rgb(241,241,241);
     z-index: 8;
     width: 100%;
+    max-width: 640px;
     display: none;
     border-bottom: 0.26rem solid #f1f1f1;
 }

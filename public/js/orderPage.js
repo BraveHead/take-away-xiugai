@@ -408,19 +408,26 @@
 
         /*点击弹出购物车*/
         var showIndex = 0;
+        let shoppingCarContent = $('#shopping_car_content');
+        let showCarContainer = $('.show_shopping_car_container');
         $(".shopping_car_pic").on("click",function () {
+            shoppingCarContent.css("left",($(document).width() - $("body").width())/2);
+            showCarContainer.css({
+                "height":$(document).height(),
+                "left":($(document).width() - $("body").width())/2
+            });
             if(parseInt($(".shopping_car_count").text()) != 0){
                 showIndex++;
                 if(showIndex >= 2){
-                    $('.show_shopping_car_container').css('display','none');
-                    $('#shopping_car_content').css('display','none');
+                    showCarContainer.css('display','none');
+                    shoppingCarContent.css('display','none');
                     showIndex = 0;
                 }else{
-                    $('.show_shopping_car_container').css({'display':'block','height':1000+'px'});
-                    $('#shopping_car_content').slideDown(500);
-                    $('.show_shopping_car_container').on("click",function (e) {
+                    showCarContainer.css({'display':'block','height':1000+'px'});
+                    shoppingCarContent.slideDown(500);
+                    showCarContainer.on("click",function (e) {
                         $(this).css("display",'none');
-                        $('#shopping_car_content').css('display','none');
+                        shoppingCarContent.css('display','none');
                     });
                 }
                 /*/!*清除点单的所有信息*!/*/
