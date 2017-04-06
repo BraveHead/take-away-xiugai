@@ -320,7 +320,7 @@ body{
     .business_list_item_left .food_later{
         background-color: #ff373e;
     }
-    .linkToItem{
+    .link-to-item{
         display: block;
         width: 100%;
         height: 2.15rem;
@@ -328,62 +328,64 @@ body{
     }
 
 /*搜索地址*/
-.peiSongQuYu{
+.pei-song-quyu{
     position: absolute;
     color: rgb(60,60,60);
     left:2.80rem;
     top: 0.15rem;
     font-size: 0.34rem;
 }
-.searchInputCheck{
+.search-input-check{
     font-size: 0.28rem;
     color: #777777;
     height: 0.40rem;
 }
-.searchAddressContainer{
+.search-address-container{
     position: relative;
     width: 100%;
     top: 0.90rem;
     height: auto;
 }
-.searchInputItem{
+.search-input-item{
     height: 0.90rem;
     border-bottom: 1px solid #d7d7d7;
     text-align: left;
     line-height: 0.90rem;
 }
-.searchInputItem>div{
+.search-input-item>div{
     width: 6.9rem;
     height: 0.9rem;
     margin: 0 auto;
 }
-.searchInputContainer{
+.search-input-container{
     background-color: #fff;
     line-height: 0.90rem;
 }
-.searchInputContainer img{
+.search-input-container i{
+    display: inline-block;
     width: 0.40rem;
     vertical-align: middle;
     margin-left: 0.20rem;
 }
-.searchInputContainer input{
+.search-input-container input{
     vertical-align: middle;
     border: none;
     outline: none;
 }
-.ShowSearchAddress{
+.show-search-address{
     height: 11.50rem;
     text-align: center;
 }
 .daXiang{
+    display: inline-block;
     margin-top: 2.50rem;
     width: 2.94rem;
 }
-.ShowSearchAddress>p{
+.show-search-address>p{
     margin-top: 0.44rem;
     color: rgb(232,84,106);
 }
-.ShowSearchAddress>h5{
+.show-search-address>h5{
     margin-top: 0.30rem;
     font-size: 0.28rem;
     color: rgb(83,83,83);

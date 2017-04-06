@@ -3,7 +3,7 @@ body{
     color: #3c3c3c;
 }
 /*结算界面*/
-.orderSettleHeaderContainer{
+.order-settle-header-container{
     height: 0.89rem;
     background-color: rgb(249,249,249);
     position: fixed;
@@ -11,7 +11,7 @@ body{
     top: 0;
     max-width: 640px;
 }
-.itemContainer{
+.item-container{
     width: 100%;
     border-bottom: 0.01rem solid #d7d7d7;
 }
@@ -19,31 +19,31 @@ body{
     margin: 0 auto;
     width: 6.9rem;
 }
-.orderSettleHeader{
+.order-settle-header{
     width: 6.9rem;
     height: 0.89rem;
     margin: 0 auto;
     text-align: center;
     line-height: 0.89rem;
 }
-.orderSettleBack{
+.order-settle-back{
     width: 0.18rem;
     vertical-align: middle;
     position: absolute;
     left: 0.3rem;
     top: 0.28rem;
 }
-.orderSettleHeader>span{
+.order-settle-header>span{
     font-size: 0.34rem;
     color: #3c3c3c;
 }
-.addressCommitContainer{
+.address-commit-container{
     background-color: rgb(255,255,255);
     height: 1.55rem;
     position: relative;
     margin-top: 0.89rem;
 }
-.addressCommit{
+.address-commit{
     position: relative;
     height: 1.47rem;
 }
@@ -53,20 +53,20 @@ body{
     width: 100%;
     max-width: 640px;
 }
-.customerName{
+.customer-name{
     position: absolute;
     left: 0;
     top:0.3rem;
     font-size: 0.30rem;
     color: rgb(34,34,31);
 }
-.customerPhone{
+.customer-phone{
     position: absolute;
     left: 2.5rem;
     top: 0.35rem;
     color: rgb(34,34,31);
 }
-.customerAddress{
+.customer-address{
     font-size: 0.26rem;
     color: rgb(34,34,31);
     font-weight: bold;
@@ -74,48 +74,48 @@ body{
     left: 0;
     top: 0.82rem;
 }
-.addressCommit>i{
+.address-commit>i{
     position: absolute;
     right: 0;
     top: 0.64rem;
     width: 0.15rem;
 }
-.payTypeContainer{
+.pay-type-container{
     position: relative;
     height: 0.88rem;
     border:none;
     background-color: rgb(239,239,244);
     line-height: 0.88rem;
 }
-.payType{
+.pay-type{
     color:#777777;
     font-size: 0.30rem;
 }
-.bankCardPayContainer{
+.bank-card-pay-container{
     height: 1.16rem;
     line-height: 1.16rem;
     font-size: 0.28rem;
     background-color: rgb(255,255,255);
     position: relative;
 }
-.bankCardPay a{
+.bank-card-pay a{
     font-size: 0.24rem;
     color:#3c3c3c;
 }
-.payTypeClicked{
+.pay-type-clicked{
     width: 0.51rem;
     position: absolute;
     right: 0.30rem;
     top:0.26rem ;
 }
 
-.couponContainer{
+.coupon-container{
     height: 1.16rem;
     margin-top: 0.2rem;
     background-color: rgb(255,255,255);
     line-height: 1.16rem;
 }
-.couponPic{
+.coupon-pic{
     display: inline-block;
     vertical-align: middle;
     width: 0.38rem;
@@ -126,13 +126,13 @@ body{
     margin-left: 0.1rem;
     color: #3c3c3c;
 }
-.orderClickedItem{
+.order-clicked-item{
     vertical-align: middle;
     float: right;
     margin-top: 0.45rem;
     width: 0.15rem;
 }
-.coupon .yuEName{
+.coupon .yuE-name{
     vertical-align: middle;
     margin-left: 0;
 }
@@ -142,12 +142,12 @@ body{
     font-size: 0.26rem;
     color: #777777;
 }
-.buttonYuE{
+.button-yuE{
     float: right;
     width: 0.87rem;
     margin-top: 0.30rem;
 }
-.arriveTimeContainer{
+.arrive-time-container{
     height: 1.16rem;
     background-color: rgb(255,255,255);
     line-height: 1.16rem;
@@ -158,49 +158,49 @@ body{
     font-size: 0.26rem;
     color: #333333;
 }
-.timeText{
+.time-text{
     color: #e5233f;
     font-size: 0.26rem;
 }
 
-.beiZhuContainer{
+.beizhu-container{
     height: 1.16rem;
     background-color: rgb(255,255,255);
     line-height: 1.16rem;
 }
-.yaoQiu{
+.yaoqiu{
     margin-left: 2.80rem;
     font-size: 0.26rem;
     color: #777777;
 }
-.orderFoodContainer{
+.order-food-container{
     margin-top: 0.2rem;
     width: 100%;
     height:auto;
     border-bottom: 0.20rem solid rgb(239,239,244);
 }
-.peiSong1{
+.peisong1{
     color: #3c3c3c;
 }
-.orderedBusinessName{
+.ordered-business-name{
     height: 1.16rem;
     line-height: 1.16rem;
     background-color: rgb(255,255,255);
 }
-.orderedBusiness span{
+.ordered-business span{
     font-weight: bolder;
     font-size: 0.30rem;
 }
-.orderFoodNameContainer{
+.order-foodname-container{
     height: 1.16rem;
     width: 100%;
     background-color: rgb(255,255,255);
     line-height: 1.16rem;
 }
-.orderFoodName a{
+.order-foodname a{
     float: right;
 }
-.orderFoodALlPeaceContainer{
+.order-food-allpeace-container{
     width: 100%;
     height: 0.98rem;
     position: fixed;
@@ -208,7 +208,7 @@ body{
     bottom: 0;
     max-width: 640px;
 }
-.orderFoodAllPeace{
+.order-food-allpeace{
     width: 50%;
     height: 0.97rem;
     border-top: 0.01rem solid #d7d7d7;
@@ -218,7 +218,7 @@ body{
     line-height: 0.97rem;
     background-color: #fbfbfb;
 }
-.orderALLPeaceSettle{
+.order-allpeace-settle{
     width: 50%;
     display: inline-block;
     float: left;
@@ -227,7 +227,7 @@ body{
     background-color: rgb(229,35,63);
     color: #ffffff;
 }
-.itemContainerLink{
+.item-container-link{
     display: block;
     width: 100%;
     height: auto;
@@ -235,12 +235,12 @@ body{
 }
 
 /*配送地址管理*/
-.addNewAddress{
+.add-new-address{
     font-size: 0.30rem;
     color: #E5233F;
     float: right;
 }
-.addAddressItemContainer{
+.add-address-item-container{
     position: relative;
     background-color:#ffffff;
     height: 1.84rem;
@@ -248,32 +248,32 @@ body{
     border-bottom: 0.01rem solid #d7d7d7;
     top: 0.89rem;
 }
-.xuanZhong{
+.xuan-zhong{
     position: absolute;
     left: 0;
     top: 0;
     width: 0.68rem;
     display: none;
 }
-.addAddressItem{
+.add-address-item{
     width: 6.9rem;
     margin: 0 auto;
     height: 1.84rem;
     position: relative;
 }
-.addAddressItemName{
+.add-address-item-name{
     position: absolute;
     left: 0;
     top: 0.46rem;
     font-size: 0.30rem;
 }
-.addAddressItemPhone{
+.add-address-item-phone{
     position: absolute;
     left: 1.74rem;
     top: 0.4rem;
     font-size: 0.36rem;
 }
-.addAddressItemAddress{
+.add-address-item-address{
     position: absolute;
     left: 0;
     top: 1.04rem;
@@ -287,13 +287,13 @@ body{
 }
 
 /*编辑添加地址*/
-.addAddressFormContainer{
+.add-address-form-container{
     width: 100%;
     height: auto;
     position: relative;
     top: 0.89rem;
 }
-#saveNewAddressForm input{
+#save-newaddress-form input{
     width: 100%;
     height: 1.17rem;
     border:none;
@@ -301,22 +301,22 @@ body{
     border-bottom: 0.01rem solid #d7d7d7;
     text-indent: 0.3rem;
 }
-.zhouList{
+.zhou-list{
     /*background:#ffffff url('../images/icon/openDown.png') no-repeat fixed 6.78rem 6.22rem;*/
     /*background-size: 0.22rem 0.14rem;*/
 }
-.closeFillRemarks{
+.close-fill-remarks{
     font-size: 0.30rem;
     float: left;
 }
-.fillRemarksTextContainer{
+.fill-remarks-text-container{
     position: relative;
     top: 1.09rem;
     height: auto;
     width: 6.90rem;
     margin: 0 auto;
 }
-.fillRemarksText{
+.fill-remarks-text{
     background-color: #f9f9f9;
     width:100%;
     height: 3.00rem;
@@ -328,13 +328,13 @@ body{
     font-size: 0.28rem;
     border: 0.01rem solid #d7d7d7;
 }
-.defaultChoice{
+.default-choice{
     position: relative;
     width: 100%;
     height: auto;
     top: 1.09rem;
 }
-.defaultChoice span{
+.default-choice span{
     height: 0.58rem;
     display:block;
     margin-top: 0.20rem;
@@ -347,66 +347,66 @@ body{
     border-radius: 0.1rem;
     float: left;
 }
-.fillRemarksText::-webkit-input-placeholder{
+.fill-remarks-text::-webkit-input-placeholder{
     position: relative;
     top: 0.15rem;
 }
 
 /*优惠券*/
-.couponListContainer{
+.coupon-list-container{
     width: 100%;
     position: relative;
     top: 0.89rem;
     color: rgb(119,119,119);
 }
-.sameCouponStyle{
+.same-coupon-style{
     width: 100%;
     height: 2.00rem;
     border-bottom: 0.01rem solid #d7d7d7;
 }
-.CouponItem{
+.coupon-item{
     width: 6.9rem;
     height: 2.0rem;
     margin: 0 auto;
     position: relative;
 }
-.couponPics{
+.coupon-pics{
     position: absolute;
     top: 0.4rem;
     left: 0.1rem;
     width: 0.72rem;
 }
-.couponTheme{
+.coupon-theme{
     position: absolute;
     left: 1.20rem;
     top: 0.4rem;
     font-size: 0.30rem;
 }
-.couponTime{
+.coupon-time{
     position: absolute;
     top: 0.92rem;
     left: 1.20rem;
     font-size: 0.26rem;
     color: rgb(119,119,119);
 }
-.couponContent{
+.coupon-content{
     position: absolute;
     font-size: 0.28rem;
     left: 1.20rem;
     top: 1.44rem;
     color: rgb(0,0,0);
 }
-.noOverdueCoupon{
+.no-overdue-coupon{
     background-color: #fff;
     color: rgb(60,60,60);
 }
-.difCouponContent{
+.dif-coupon-content{
     color: rgb(119,119,119);
 }
-.overdueCoupon{
+.overdue-coupon{
     background-color: rgb(255,211,216);
 }
-.deleteCoupon{
+.delete-coupon{
     position: absolute;
     width: 1.90rem;
     height: 0.58rem;
@@ -418,18 +418,19 @@ body{
     top: 0.42rem;
     color: #ffffff;
 }
-.deleteCoupon>img{
+.delete-coupon>i{
+    display: inline-block;
     vertical-align: middle;
     width: 0.26rem;
 }
-.deleteCoupon>img:hover{
+.delete-coupon>img:hover{
     cursor: pointer;
 }
-.deleteCoupon>span{
+.delete-coupon>span{
     vertical-align: middle;
     line-height: 0.58rem;
 }
-.addCouponAlert{
+.add-coupon-alert{
     position:absolute;
     left:0;
     top:0;
@@ -441,7 +442,7 @@ body{
     display:none;
     z-Index:50;
 }
-.addCouponNumber{
+.add-coupon-number{
     position: absolute;
     width: 5.50rem;
     height: 2.50rem;
@@ -451,7 +452,7 @@ body{
     display: none;
     left: 1.00rem;
 }
-.addCouponNumber>p{
+.add-coupon-number>p{
     display: block;
     height: 0.90rem;
     width: 100%;
@@ -459,17 +460,17 @@ body{
     line-height: 0.90rem;
     color: rgb(60,60,60);
 }
-.inputCoupon{
+.input-coupon{
     width: 4.50rem;
     height: 0.68rem;
     margin-left:0.49rem;
     border: 0.01rem solid #d7d7d7;
 }
-.addCouponNumber>div{
+.add-coupon-number>div{
     width: 100%;
     height: 0.90rem;
 }
-.addCouponNumber>div>span{
+.add-coupon-number>div>span{
     width: 50%;
     display: block;
     height: 0.90rem;
@@ -477,13 +478,13 @@ body{
     text-align: center;
     line-height: 0.90rem;
 }
-.addCouponNumber>div>span:hover{
+.add-coupon-number>div>span:hover{
     cursor: pointer;
 }
-.cancelCoupon{
+.cancel-coupon{
     color: rgb(60,60,60);
 }
-.sureCoupon{
+.sure-coupon{
     color: rgb(229,35,63);
 }
 .coupon>a{
@@ -492,7 +493,7 @@ body{
 .beiZhu>a{
     display: block;
 }
-.defaultChoice>span:hover{
+.default-choice>span:hover{
     cursor: pointer;
 }
 

@@ -2,27 +2,27 @@ body{
     background-color: #FAFAFA;
 }
 /*登录界面的头部*/
-.loadingHeaderContainer{
+.loading-header-container{
     width: 100%;
     height: 1.0rem;
     border-bottom: 0.01rem solid #d7d7d7;
 }
-.loadingHeader{
+.loading-header{
     width: 6.9rem;
     margin: 0 auto;
     position: relative;
     text-align: center;
 }
-#loadingClose{
+#loading-close{
     position: absolute;
     width: 0.64rem;
     left: -0.17rem;
     top: .18rem;
 }
-#loadingClose>img{
+#loading-close>img{
     width: 0.64rem;
 }
-.loadingHeader b{
+.loading-header b{
     font-size: 0.34rem;
     color: #3c3c3c;
     display: inline-block;
@@ -32,7 +32,7 @@ body{
     height: 1.0rem;
     width: auto;
 }
-.loadingHeader a{
+.loading-header a{
     position: absolute;
     font-size: 0.30rem;
     color: #E5233F;
@@ -40,11 +40,11 @@ body{
     top: 0.35rem;
 }
 /*登录界面的登录内容*/
-.loadingContentContainer{
+.loading-content-container{
     width: 100%;
     height: auto;
 }
-.loadingContent{
+.loading-content{
     width: 6.3rem;
     height: auto;
     margin: 0 auto;
@@ -85,14 +85,14 @@ body{
     height: 0.26rem;
     text-align: center;
 }
-.loadingForm{
+.loading-form{
     width: 6.3rem;
     margin: 0 auto;
     color: #aaaaaa;
     margin-top: 0.4rem;
     position: relative;
 }
-.loadingForm input{
+.loading-form input{
     width: 6.3rem;
     height: 0.89rem;
     border: none;
@@ -103,7 +103,7 @@ body{
     outline: none;
     background-color: rgb(250,250,250);
 }
-.loadingSubmit{
+.loading-submit{
     width: 6.28rem;
     height: 0.82rem;
     border: 0.01rem solid #d7d7d7;
@@ -113,19 +113,19 @@ body{
     margin-top: 0.64rem;
     color:#aaaaaa;
 }
-.forgetPassword{
+.forget-password{
     display: block;
     color: #aaaaaa;
     margin-top: 0.32rem;
     font-size:0.26rem;
 }
-.backLoading{
+.back-loading{
     width: 0.18rem;
     left: 0;
     position: absolute;
     top: 0.33rem;
 }
-.getVerificationCode{
+.get-verification-code{
     position: absolute;
     display: inline-block;
     background-color: rgb(231,231,231);
@@ -139,7 +139,7 @@ body{
     border-radius: 0.10rem;
     left: 4.6rem;
 }
-.agreeContainer{
+.agree-container{
     width: 6.30rem;
     height: 0.80rem;
     line-height: 0.80rem;
@@ -148,15 +148,15 @@ body{
     width: 0.26rem;
     vertical-align: middle;
 }
-.agreeContainer span{
+.agree-container span{
     vertical-align: middle;
 }
-.agreeText{
+.agree-text{
     color: #E5233F;
     padding-bottom: 0.02rem;
     border-bottom: 0.01rem solid #E5233F;
 }
-.contactTab{
+.contact-tab{
     width: 6.3rem;
     margin: 0 auto;
     margin-top: 0.60rem;
@@ -164,38 +164,38 @@ body{
     border-bottom: 0.01rem solid #d7d7d7;
     position: relative;
 }
-.emailForget{
+.email-forget{
     position: absolute;
     left: 0.92rem;
     padding-bottom:0.10rem;
     color: #aaaaaa;
     font-size: 0.28rem;
 }
-.phoneForget{
+.phone-forget{
     position: absolute;
     left: 4.46rem;
     padding-bottom: 0.10rem;
     color: #aaaaaa;
     font-size: 0.28rem;
 }
-.emailText{
+.email-text{
     line-height: 0.5rem;
     color: #777777;
     font-size: 0.26rem;
     margin-top: 0.2rem;
     display: block;
 }
-.collectTabShow{
+.collect-tab-show{
     border-bottom: 0.04rem solid rgb(229,35,63);
     color: #3c3c3c;
 }
-.forgetTab{
+.forget-tab{
     display: none;
 }
 .show{
     display: block;
 }
-.contactTab>b{
+.contact-tab>b{
     display: block;
     width: 0.02rem;
     height: 0.28rem;

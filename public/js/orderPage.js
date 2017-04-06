@@ -28,23 +28,23 @@
     };
     /*选择配送服务*/
     function choiceServer() {
-        $('.serverSettingContainer').css({
+        $('.server-setting-container').css({
             'display':'block',
             'height':$(document).height() +"px",
             "z-index":100
         });
-        $('.serverSetting').css({
+        $('.server-setting').css({
             "display":'block',
-            "top":($(document).height() - $('.serverSetting').height())/2+'px',
-            "left":($(document).width() - $(".serverSetting").width())/2 + "px",
+            "top":($(document).height() - $('.server-setting').height())/2+'px',
+            "left":($(document).width() - $(".server-setting").width())/2 + "px",
             "z-index":100
         });
         let serverPicArr = ['sprite sprite-noClickedServer','sprite sprite-clickedServer'];
-        $('.serverSettingType>div>i').on('click',function () {
-            let index = $('.serverSettingType>div>i').index(this);
-            $('.serverSettingType>div>i').attr('class',serverPicArr[0]);
-            $('.serverSettingType>div>i').eq(index).attr('class',serverPicArr[1]);
-            $('.serverSettingItem').eq(index).addClass('show').siblings().removeClass('show');
+        $('.server-setting-type>div>i').on('click',function () {
+            let index = $('.server-setting-type>div>i').index(this);
+            $('.server-setting-type>div>i').attr('class',serverPicArr[0]);
+            $('.server-setting-type>div>i').eq(index).attr('class',serverPicArr[1]);
+            $('.server-sdetting-item').eq(index).addClass('show').siblings().removeClass('show');
         });
         /**
          * @className 节点的className
@@ -53,35 +53,35 @@
         function showContent(className,nowIndex) {
             /*点击区域，显示选项*/
             $('.'+ className).on('click',function () {
-                $('.regionListContainer').css({
+                $('.region-list-container').css({
                     'display':'block',
-                    'top':($(window).height() - $('.regionListContainer').height())/2 + "px",
-                    'left':($(document).width() - $(".regionListContainer").width())/2 + "px"
+                    'top':($(window).height() - $('.region-list-container').height())/2 + "px",
+                    'left':($(document).width() - $(".region-list-container").width())/2 + "px"
                 });
             });
         }
         let nowIndex;
-        $('.regionDiv').on('click',function (e) {
-            nowIndex = $('.regionDiv').index(this);
-            showContent('regionDiv',nowIndex);
+        $('.region-div').on('click',function (e) {
+            nowIndex = $('.region-div').index(this);
+            showContent('region-div',nowIndex);
         });
         /*选择选项后关闭区域选项框*/
-        $('.regionListContainer li').on('click',function (e) {
-            let index = $('.regionListContainer li').index(this);
-            $('.regionListContainer').css('display','none');
-            $('.regionDiv').eq(nowIndex).html($('.regionListContainer li').eq(index).html() + '<i class="sprite sprite-serverSettingDown"></i>');
+        $('.region-list-container li').on('click',function (e) {
+            let index = $('.region-list-container li').index(this);
+            $('.region-list-container').css('display','none');
+            $('.region-div').eq(nowIndex).html($('.region-list-container li').eq(index).html() + '<i class="sprite sprite-serverSettingDown"></i>');
         });
         /*确认保存信息*/
-        $('.sureServer').on('click',function (e) {
-            $('.serverSettingContainer').css({
+        $('.sure-server').on('click',function (e) {
+            $('.server-setting-container').css({
                 "display":'none',
                 "z-index":50
             });
-            $('.serverSetting').css('display','none');
+            $('.server-setting').css('display','none');
         });
-        $('.cancelServer, .serverSettingTitel>img').on('click',function (e) {
-            $('.serverSettingContainer').css('display','none');
-            $('.serverSetting').css('display','none');
+        $('.cancel-server, .server-setting-titel>img').on('click',function (e) {
+            $('.server-setting-container').css('display','none');
+            $('.server-setting').css('display','none');
         })
     }
     /*点击返回上一页*/
@@ -145,7 +145,7 @@
                     $('.order_collection').attr('src',arrStatCopy[0]);
                 }
                 $('.order_header_message_container').addClass('headerTransform showTransformHidden');
-                $('.businessItemName').css({'display':'block','color':'#3c3c3c'});
+                $('.business-item-name').css({'display':'block','color':'#3c3c3c'});
                 $('.order_share').attr("class",shareArr[1]);
             }else{
                 $('.order_share').attr("class",shareArr[0]);
@@ -157,7 +157,7 @@
                 }
                 $('.order_back').attr('class',backArr[0]);
                 $('.order_header_message_container').removeClass('headerTransform showTransformHidden');
-                $('.businessItemName').css({'display':'none','color':'#3c3c3c'});
+                $('.business-item-name').css({'display':'none','color':'#3c3c3c'});
             }
 
         });
@@ -279,30 +279,30 @@
                 ShoppingListItemShowOrHidden(nowIndex);
                 ShoppingBill();  //购物车总价与数量
             }else{
-                $('.skuFoodHtml').css({
+                $('.sku-food-html').css({
                     'display':'block',
                     'height':$(document).height()+"px",
                     'background-color':'rgb(241,241,241)'
                 });
-                $('.skuFoodName').text(foodItem.foodItem);
-                $('.skuFoodPeace').text(foodItem.peace);
-                $('.skuFoodCount').text(foodItem.count);
+                $('.sku-food-name').text(foodItem.foodItem);
+                $('.sku-food-peace').text(foodItem.peace);
+                $('.sku-food-count').text(foodItem.count);
 
                 /*sku商品数量的添加*/
                 let skuFoodCount = foodItem.count;
-                $('.skuFoodAddCount').on('click',function () {
+                $('.sku-food-addcount').on('click',function () {
                     skuFoodCount += 1;
-                    $('.skuFoodCount').text(skuFoodCount);
+                    $('.sku-food-count').text(skuFoodCount);
                 });
 
                 /*sku商品数量的减少*/
-                $('.skuFoodReduce').on('click',function () {
-                    let skuFoodCount = parseInt($('.skuFoodCount').text());
+                $('.sku-food-reduce').on('click',function () {
+                    let skuFoodCount = parseInt($('.sku-food-count').text());
                     skuFoodCount -= 1;
                     if(skuFoodCount <= 0){
                         skuFoodCount = 0;
                     }
-                    $('.skuFoodCount').text(skuFoodCount);
+                    $('.sku-food-count').text(skuFoodCount);
                 });
                 /*sku商品的选择口味*/
                 let flavorItemPic = $('.flavorItemPic');
@@ -314,39 +314,39 @@
                         eq(nowIndex).attr('class','flavorItemPic sprite sprite-clickedRound');
                     }
                 });
-                let addDish = $('.addDish');
+                let addDish = $('.add-dish');
                 addDish.on('click',function (e) {
                     let nowIndex = addDish.index(this);
                     let picSrc = addDish.eq(nowIndex).attr('class');
-                    if(picSrc == 'addDish sprite sprite-noClickedSquare'){
-                        addDish.eq(nowIndex).attr('class','addDish sprite sprite-clickedSquare');
+                    if(picSrc == 'add-dish sprite sprite-noClickedSquare'){
+                        addDish.eq(nowIndex).attr('class','add-dish sprite sprite-clickedSquare');
                     }else{
-                        addDish.eq(nowIndex).attr('class','addDish sprite sprite-noClickedSquare');
+                        addDish.eq(nowIndex).attr('class','add-dish sprite sprite-noClickedSquare');
                     }
                 });
                 /*点击取消，不保存sku选项*/
-                $('.timeHeaderBackMessage').on('click',function () {
-                    $('.skuFoodHtml').css('display','none');
+                $('.time-header-back-message').on('click',function () {
+                    $('.sku-food-html').css('display','none');
                     ShoppingBill();  //购物车总价与数量
                 });
                 /*点击确认，并保存sku的选择*/
                 $('.sure').one('click',function () {
-                    let skuFoodCount = parseInt($('.skuFoodCount').text());
+                    let skuFoodCount = parseInt($('.sku-food-count').text());
                     foodItem.count = skuFoodCount;
                     foodItem['addFood'] = "";
-                    $('.addDish').off("click");
+                    $('.add-dish').off("click");
                     for(let i= 0; i < flavorItemPic.length;i++){
                         if(flavorItemPic.eq(i).attr('class') == "flavorItemPic sprite sprite-clickedRound"){
                             foodItem['type'] = flavorItemPic.eq(i).siblings().text();
                         }
                     }
-                    for(let i= 0; i < $('.addDish').length;i++){
-                        if($('.addDish').eq(i).attr('class') == "addDish sprite sprite-clickedSquare"){
-                            foodItem['addFood'] += " "+$('.addDish').eq(i).siblings().text();
+                    for(let i= 0; i < $('.add-dish').length;i++){
+                        if($('.add-dish').eq(i).attr('class') == "add-dish sprite sprite-clickedSquare"){
+                            foodItem['addFood'] += " "+$('.add-dish').eq(i).siblings().text();
                         }
                     }
                     storage.setItem('foodItem'+ nowIndex, JSON.stringify(foodItem));
-                    $('.skuFoodHtml').css('display','none');
+                    $('.sku-food-html').css('display','none');
 
                     let foodItemNext = JSON.parse(storage.getItem('foodItem'+nowIndex));
                     $('.now_count').eq(nowIndex).text(foodItemNext.count);
@@ -477,10 +477,10 @@
     }
     /*点击背景消失*/
     function clickBeiJing() {
-        $(".serverSettingContainer").on("click",function (e) {
+        $(".server-setting-container").on("click",function (e) {
             $(this).css("display","none");
-            $(".serverSetting").css("display",'none');
-            $(".regionListContainer").css("display","none");
+            $(".server-setting").css("display",'none');
+            $(".region-list-container").css("display","none");
         })
     }
     //加载函数

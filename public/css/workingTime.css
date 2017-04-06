@@ -4,13 +4,13 @@ body{
     color: #3c3c3c;
 }
 
-.TimeContentContainer{
+.time-content-container{
     width: 100%;
     height: 0.89rem;
     background-color: #fafafa;
     border-bottom: 0.01rem solid #d7d7d7;
 }
-.TimeContentTitle>i{
+.time-content-title>i{
     display: inline-block;
     width: 0.18rem;
     vertical-align: middle;
@@ -18,27 +18,27 @@ body{
     left: 0.3rem;
     top: 0.28rem;
 }
-.TimeContentTitle{
+.time-content-title{
     width: 6.9rem;
     height: 0.83rem;
     text-align: center;
     line-height: 0.83rem;
     margin: 0 auto;
 }
-.TimeContentTitle.span{
+.time-content-title.span{
     font-size: 0.34rem;
 }
-.TimeTypeSwitchContainer{
+.time-typeswitch-container{
     width: 100%;
     height: 0.80rem;
     background-color: rgb(253,353,253);
 }
-.TimeTypeSwitch{
+.time-type-switch{
     width: 6.9rem;
     height: 0.8rem;
     margin: 0 auto;
 }
-.TimeTypeSwitchItem{
+.time-typeswitch-Item{
     display: inline-block;
     float: left;
     text-align: center;
@@ -46,12 +46,12 @@ body{
     height: 0.8rem;
     line-height: 0.8rem;
 }
-.TimeTypeSwitchItem a{
+.time-typeswitch-Item a{
     padding: 0.14rem 0.1rem;
     /*border-bottom: 0.04rem solid rgb(229,35,63);*/
     border-bottom: 0.04rem solid rgb(253,253,253);
 }
-.TimeTypeSwitchItem a:hover{
+.time-typeswitch-Item a:hover{
     cursor: pointer;
 }
 .showSwitchRed{
@@ -60,21 +60,21 @@ body{
 }
 
 
-.TimeSwitchContext{
+.time-switch-context{
     width: 100%;
     height: auto;
     display: none;
 }
-.TimeSwitchItem{
+.time-switch-item{
     background-color: rgb(253,253,253);
     width: 100%;
     height: 0.83rem;
     border-bottom: 0.01rem solid #d7d7d7;
 }
-.TimeSwitchItem span{
+.time-switch-item span{
     margin-left: 0.3rem;
     line-height: 0.83rem;
-}.TimeSwitchItem time{
+}.time-switch-item time{
     float: right;
     margin-right: 0.3rem;
      line-height:0.83rem;

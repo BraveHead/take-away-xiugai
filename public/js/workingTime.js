@@ -6,27 +6,27 @@
     var  storage = window.sessionStorage;
 
     if(storage.getItem('timeNum') == 1){
-        $('.TimeTypeSwitchItem>a').eq(1).addClass("showSwitchRed").css('border-bottom-color','rgb(229,35,63)');
-        $('.TimeTypeSwitchItem>a').eq(0).removeClass("showSwitchRed").css('border-bottom-color','rgb(253,253,253)');
-        $('.TimeSwitchContext').eq(1).css('display','block');
-        $('.TimeSwitchContext').eq(0).css('display','none');
+        $('.time-typeswitch-Item>a').eq(1).addClass("showSwitchRed").css('border-bottom-color','rgb(229,35,63)');
+        $('.time-typeswitch-Item>a').eq(0).removeClass("showSwitchRed").css('border-bottom-color','rgb(253,253,253)');
+        $('.time-switch-context').eq(1).css('display','block');
+        $('.time-switch-context').eq(0).css('display','none');
     }
     if(storage.getItem('timeNum') == 0){
-        $('.TimeSwitchContext').eq(1).css('display','none');
-        $('.TimeSwitchContext').eq(0).css('display','block');
-        $('.TimeTypeSwitchItem>a').eq(0).addClass("showSwitchRed").css('border-bottom-color','rgb(229,35,63)');
-        $('.TimeTypeSwitchItem>a').eq(1).removeClass("showSwitchRed").css('border-bottom-color','rgb(253,253,253)');
+        $('.time-switch-context').eq(1).css('display','none');
+        $('.time-switch-context').eq(0).css('display','block');
+        $('.time-typeswitch-Item>a').eq(0).addClass("showSwitchRed").css('border-bottom-color','rgb(229,35,63)');
+        $('.time-typeswitch-Item>a').eq(1).removeClass("showSwitchRed").css('border-bottom-color','rgb(253,253,253)');
     }
 
 
-    $('.TimeTypeSwitchItem>a').on('click',function () {
-        var index = $('.TimeTypeSwitchItem a').index(this);
-        $('.TimeTypeSwitchItem>a').removeClass('showSwitchRed').css('border-bottom-color','rgb(253,253,253)');
-        $('.TimeTypeSwitchItem>a').eq(index).addClass('showSwitchRed').css('border-bottom-color','rgb(229,35,63)');
-        $('.TimeSwitchContext').eq(index).css('display','block').siblings('.TimeSwitchContext').css('display','none');
+    $('.time-typeswitch-Item>a').on('click',function () {
+        var index = $('.time-typeswitch-Item a').index(this);
+        $('.time-typeswitch-Item>a').removeClass('showSwitchRed').css('border-bottom-color','rgb(253,253,253)');
+        $('.time-typeswitch-Item>a').eq(index).addClass('showSwitchRed').css('border-bottom-color','rgb(229,35,63)');
+        $('.time-switch-context').eq(index).css('display','block').siblings('.time-switch-context').css('display','none');
     });
 
-    $('.TimeContentTitle').on('click',function () {
+    $('.time-content-title').on('click',function () {
         window.history.back();
     })
 })();

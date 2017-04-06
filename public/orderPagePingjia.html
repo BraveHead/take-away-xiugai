@@ -19,7 +19,7 @@
     <header class="order_food_header">
         <div class="order_header_nav">
             <i class="order_back sprite sprite-back"></i>
-            <span class="businessItemName" style="color: #3c3c3c;">蜀香坊</span>
+            <span class="business-item-name" style="color: #3c3c3c;">蜀香坊</span>
             <img class="order_collection" src="images/icon/no_collection.png"/>
             <i class="order_share sprite sprite-share"></i>
         </div>
@@ -171,9 +171,9 @@
     </div>
 </div>
 <!--阴影背景-->
-<div class="serverSettingContainer"></div>
+<div class="server-setting-container"></div>
 <!--点击分享-->
-    <div class="ShareListContainer">
+    <div class="share-list-container">
         <a href="#"><i class="sprite sprite-qqFirends"></i><p>QQ好友</p></a>
         <a href="#"><i class="sprite sprite-qqFirendsHome"></i><p>QQ空间</p></a>
         <a href="#"><i class="sprite sprite-weChatFriends"></i><p>微信好友</p></a>
@@ -248,7 +248,7 @@
                         $('.order_collection').attr('src',arrStatCopy[0]);
                     }
                     $('.order_header_message_container').addClass('headerTransform showTransformHidden');
-                    $('.businessItemName').css({'display':'block','color':'#3c3c3c'});
+                    $('.business-item-name').css({'display':'block','color':'#3c3c3c'});
                     $('.order_share').attr("class",shareArr[1]);
                 }else{
                     $('.order_share').attr("class",shareArr[0]);
@@ -260,7 +260,7 @@
                     }
                     $('.order_back').attr('class',backArr[0]);
                     $('.order_header_message_container').removeClass('headerTransform showTransformHidden');
-                    $('.businessItemName').css({'display':'none','color':'#3c3c3c'});
+                    $('.business-item-name').css({'display':'none','color':'#3c3c3c'});
                 }
 
             });

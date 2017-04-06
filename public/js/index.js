@@ -42,7 +42,7 @@
             "height":$(document).height() + "px",
             "left":($(document).width() - $("body").width())/2 + "px"
         }).slideDown("normal");
-        $(".sort>img").attr('src',"Pictures/Pic/header_icon/sort_clicked.png");
+        $(".sort>i").attr('class',"sprite sprite-sort_clicked");
 
     });
 
@@ -63,9 +63,9 @@
     });
 
     /*搜索地址*/
-    $('.searchInputCheck').on('input propertychange',function (e) {
+    $('.search-input-check').on('input propertychange',function (e) {
         if($(this).val() == 'no'){
-            $('.ShowSearchAddress').html("<img src='./Pictures/Pic/header_icon/Vector-Smart-Object.png' class='daXiang'/>" +
+            $('.show-search-address').html("<i class='daXiang sprite sprite-Vector-Smart-Object'></i>" +
                 "<p>阿偶~你想找的不在这里哎</p>" +
                 "<h5>啊~查无此地区！检查下你的输入再试吧！</h5>");
         }
@@ -80,8 +80,6 @@
             $('.history_search_content_type').prepend('<span>'+ $('.hot_search_content_type>span').eq(nowIndex).text()
                 +'<i style="display: none" class="sprite sprite-clear_item"></i></span>');
         }
-
-
     });
 
     let hidden = true;

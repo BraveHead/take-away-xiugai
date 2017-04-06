@@ -49,19 +49,19 @@
     /*点击分享*/
     function clickShare() {
         $('.order_share').on("click",function (e) {
-            $('.serverSettingContainer').css({
+            $('.server-setting-container').css({
                 "display":'block',
                 "height":$(document).height() + "px"
             });
-            $('.ShareListContainer').css({
+            $('.share-list-container').css({
                 "display":'block',
-                'top':($(document).height() - $('.ShareListContainer').height())/2 + "px"
+                'top':($(document).height() - $('.share-list-container').height())/2 + "px"
             });
-            $(".ShareListContainer").css("left",($(document).width()- $(".ShareListContainer").width())/2 + "px");
+            $(".share-list-container").css("left",($(document).width()- $(".share-list-container").width())/2 + "px");
         });
-        $('.ShareListContainer>div').on('click',function (e) {
-            $('.serverSettingContainer').css("display",'none');
-            $('.ShareListContainer').css('display','none');
+        $('.share-list-container>div').on('click',function (e) {
+            $('.server-setting-container').css("display",'none');
+            $('.share-list-container').css('display','none');
         });
     }
 
@@ -103,7 +103,7 @@
                 $('.order_back').attr('src',backArr[1]);
 
                 $('.order_header_message_container').addClass('headerTransform showTransformHidden');
-                $('.businessItemName').css({'display':'block','color':'#3c3c3c'});
+                $('.business-item-name').css({'display':'block','color':'#3c3c3c'});
                 $('.order_share').attr("src",shareArr[1]);
             }else{
                 if(storage.getItem("icon") == "fullRed" || storage.getItem("icon") == "fullWhite"){
@@ -116,15 +116,15 @@
 
                 $('.order_back').attr('src',backArr[0]);
                 $('.order_header_message_container').removeClass('headerTransform showTransformHidden');
-                $('.businessItemName').css({'display':'none','color':'#3c3c3c'});
+                $('.business-item-name').css({'display':'none','color':'#3c3c3c'});
             }
         })
     }
     /*点击背景消失*/
     function clickBeiJing() {
-        $(".serverSettingContainer").on("click",function (e) {
+        $(".server-setting-container").on("click",function (e) {
             $(this).css("display","none");
-            $(".ShareListContainer").css("display","none");
+            $(".share-list-container").css("display","none");
         })
     }
     function init() {

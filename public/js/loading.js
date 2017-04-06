@@ -5,17 +5,17 @@
 
     /*返回上一页*/
     function backToPrev() {
-        $('.backLoading').on('click',function () {
+        $('.back-loading').on('click',function () {
             window.history.back();
         })
     }
 
     /*忘记密码界面的选项切换*/
     function tabChange() {
-        $('.contactTab>span').on('click',function () {
-            let index = $('.contactTab>span').index(this);
-            $('.contactTab>span').eq(index).addClass('collectTabShow').siblings().removeClass('collectTabShow');
-            $('.forgetTab').eq(index).addClass("show").siblings(".forgetTab").removeClass('show');
+        $('.contact-tab>span').on('click',function () {
+            let index = $('.contact-tab>span').index(this);
+            $('.contact-tab>span').eq(index).addClass('collect-tab-show').siblings().removeClass('collect-tab-show');
+            $('.forget-tab').eq(index).addClass("show").siblings(".forget-tab").removeClass('show');
         });
     }
     let pattern,
@@ -110,13 +110,13 @@
             let fgEmail = $(".fg-email").val();
             checkEmail($(this).val());
             if(fgEmail){
-                switchLoadingToRed(".getEmailPassword");
+                switchLoadingToRed(".get-email-password");
             }else{
-                switchLoadingToWhite(".getEmailPassword");
+                switchLoadingToWhite(".get-email-password");
             }
         });
 
-        $(".getEmailPassword").on("click",function (e) {
+        $(".get-email-password").on("click",function (e) {
             if(email){
                 alert("邮箱密码发送成功,请查收！");
                 return true;
@@ -129,13 +129,13 @@
         $(".fg-phone").on("input propertychange",function () {
             checkPhoneNumber($(this).val());
             if($(this).val()){
-                switchPhoneCodeToRed(".getVerificationCode");
+                switchPhoneCodeToRed(".get-verification-code");
             }else{
-                switchPhoneCodeToWhite(".getVerificationCode");
+                switchPhoneCodeToWhite(".get-verification-code");
             }
         });
 
-        $(".getVerificationCode").on("click",function (e) {
+        $(".get-verification-code").on("click",function (e) {
             let codeTimes = 10;
             let id;
             setInterval(id);
@@ -166,13 +166,13 @@
         $(".fg-password").on("input propertychange",function (e) {
             checkPassword($(this).val());
             if($(this).val()){
-                switchLoadingToRed(".getPhonePassword");
+                switchLoadingToRed(".get-phone-password");
             }else{
-                switchPhoneCodeToWhite(".getPhonePassword");
+                switchPhoneCodeToWhite(".get-phone-password");
             }
         });
 
-        $('.getPhonePassword').on("click",function (e) {
+        $('.get-phone-password').on("click",function (e) {
             if(phone && phoneCode && password){
                 alert("重置密码成功！");
                 return true;
