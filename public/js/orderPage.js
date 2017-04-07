@@ -108,18 +108,6 @@
     function scrollFun() {
         if(scrolling){
             let a = $(this).scrollTop();
-            // if(ulItemArr[1]< a && a<=ulItemArr[2]-1){
-            //     ulScrollItem(".food_type_list_item",1);
-            // }else if(ulItemArr[2]< a && a<=ulItemArr[3]-1){
-            //     ulScrollItem(".food_type_list_item",2);
-            // }else if(ulItemArr[3]< a && a<=ulItemArr[4]-1){
-            //     ulScrollItem(".food_type_list_item",3);
-            // }else if(ulItemArr[4]< a ){
-            //     ulScrollItem(".food_type_list_item",4);
-            // }else if(ulItemArr[0]< a && a <= ulItemArr[1]-1){
-            //     ulScrollItem(".food_type_list_item",0);
-            // }
-
             let length = $(".food_type_list_item").length;
             for(let i = 0; i < length; i++){
                 if(ulItemArr[i]< a && a<=ulItemArr[i+1]-1){
@@ -211,9 +199,9 @@
     function ShoppingCar() {
         /*获取数据并存到sessionStroage*/
         allFoodItemCount = dataJson.foodData.length;
-        for(let i = 0; i < allFoodItemCount;i++){
-            storage.setItem("foodItem"+i,JSON.stringify(dataJson.foodData[i]));
-        }
+        // for(let i = 0; i < allFoodItemCount;i++){
+        //     storage.setItem("foodItem"+i,JSON.stringify(dataJson.foodData[i]));
+        // }
         /**
          * @reduceName 减少按钮的className
          * @countName   数量的className

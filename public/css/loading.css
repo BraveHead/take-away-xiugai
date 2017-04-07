@@ -68,7 +68,8 @@ body{
     height: 1.0rem;
 }
 .third_party_loginPic{
-    width: 0.84rem;
+    display: inline-block;
+    width: 0.86rem;
 }
 .third_party_login>div>p{
     width: 100%;

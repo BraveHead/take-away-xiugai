@@ -433,7 +433,6 @@ marquee{
     .choice_evaluate{
         width: 100%;
         height:0.78rem;
-        border-bottom: 0.01rem solid #d7d7d7;
         color: #777777;
         overflow: hidden;
     }
@@ -462,13 +461,10 @@ marquee{
         width: 100%;
         height: auto;
     }
-    .evaluate_content_bus{
-        border-bottom:0.01rem solid #d7d7d7;
-    }
     .evaluate_content_container{
         width: 7.5rem;
         max-width: 640px;
-        border-bottom: 0.01rem solid #d7d7d7;
+        border-top: 0.01rem solid #d7d7d7;
     }
     .evaluate_content_container>div{
         width: 6.9rem;

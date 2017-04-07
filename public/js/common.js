@@ -25,18 +25,22 @@
             switch(src){
                 case arrStat[0]:
                     storage.setItem("icon","fullWhite");
+                    alert("收藏成功！");
                     $(this).attr('src',arrStat[1]);
                     break;
                 case arrStat[1]:
-                    storage.setItem("icon","white")
+                    storage.setItem("icon","white");
+                    alert("取消收藏！");
                     $(this).attr('src',arrStat[0]);
                     break;
                 case arrStatCopy[0]:
                     storage.setItem('icon',"fullRed");
+                    alert("收藏成功！");
                     $(this).attr('src',arrStatCopy[1]);
                     break;
                 case arrStatCopy[1]:
                     storage.setItem("icon","red");
+                    alert("取消收藏！");
                     $(this).attr("src",arrStatCopy[0]);
                     break;
                 default:
