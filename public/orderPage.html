@@ -616,12 +616,11 @@
 
 </body>
 <script>
-  $(document).ready(function () {
     $(".new").css({
       "left":($(document).width() - $("body").width())/2 + "px"
     });
     let dataLength = dataJson.foodData.length;
-    let dataObj = dataJson.foodData
+    let dataObj = dataJson.foodData;
     for(let i = 0; i < dataLength; i++){
       $("#shopping_car_content").append('<div class="shopping_item"> ' +
         '<div class="shopping_item_container"> ' +
@@ -636,8 +635,6 @@
         '</div> ' +
         '</div>');
     }
-
-  })
 </script>
 <script src="js/common.js"></script>
 <script src="js/orderPage.js"></script>
