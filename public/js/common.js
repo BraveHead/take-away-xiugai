@@ -7,13 +7,13 @@
         arrStatCopy = ['images/icon/collection_dark.png',"images/icon/red_stat.png"],
         shareArr = ['order_share sprite sprite-share',"order_share sprite sprite-share_dark"],
         backArr = ['order_back sprite sprite-back','order_back sprite sprite-back_gray'];
-    var storage = window.sessionStorage;
+    let storage = window.sessionStorage;
     /*点击返回上一页*/
     $('.order_back').on('click',function (e) {
         window.history.back();
     });
     setTimeout(function () {
-        if(storage.getItem("icon") == "fullWhite" || storage.getItem("icon") == "fullRed"){
+        if(storage.getItem("icon") === "fullWhite" || storage.getItem("icon") === "fullRed"){
             $(".order_collection").attr("src",arrStat[1]);
         }
     },20);
@@ -53,15 +53,16 @@
     /*点击分享*/
     function clickShare() {
         $('.order_share').on("click",function (e) {
+            let shareListContainer = $('.share-list-container');
             $('.server-setting-container').css({
                 "display":'block',
                 "height":$(document).height() + "px"
             });
-            $('.share-list-container').css({
+          shareListContainer.css({
                 "display":'block',
-                'top':($(document).height() - $('.share-list-container').height())/2 + "px"
+                'top':($(document).height() - shareListContainer.height())/2 + "px"
             });
-            $(".share-list-container").css("left",($(document).width()- $(".share-list-container").width())/2 + "px");
+          shareListContainer.css("left",($(document).width()- shareListContainer.width())/2 + "px");
         });
         $('.share-list-container>div').on('click',function (e) {
             $('.server-setting-container').css("display",'none');
@@ -71,8 +72,8 @@
 
     /*更多优惠的点击显示*/
     function ShowSafe() {
-        var arrSrc= ['sprite sprite-safe_up','sprite sprite-safe_down'];
-        var index = 1;
+        let arrSrc= ['sprite sprite-safe_up','sprite sprite-safe_down'];
+        let index = 1;
         $(".safe_more").on('click',function (e) {
             index++;
             if(index >= 2){

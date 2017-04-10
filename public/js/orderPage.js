@@ -12,6 +12,7 @@
     var scrolling = true;
     var ulItemArr = [];
     let allFoodItemCount;
+    let isChoiceServer = false;
     var dataJson = {"foodData":[
         {"foodItem":"春卷","peace":"$22","sku":"0","count":0},
         {"foodItem":"麻瓜","peace":"$25","sku":"1","count":0},
@@ -73,6 +74,7 @@
         });
         /*确认保存信息*/
         $('.sure-server').on('click',function (e) {
+            isChoiceServer = true;
             $('.server-setting-container').css({
                 "display":'none',
                 "z-index":50
@@ -80,6 +82,7 @@
             $('.server-setting').css('display','none');
         });
         $('.cancel-server, .server-setting-titel>img').on('click',function (e) {
+            isChoiceServer = false;
             $('.server-setting-container').css('display','none');
             $('.server-setting').css('display','none');
         })
@@ -213,12 +216,12 @@
             if(foodItem.count <= 0){
                 foodItem.count = 0;
                 storage.setItem('foodItem'+index,JSON.stringify(foodItem));
-                $("." + reduceName).eq(index).css('visibility','hidden');
-                $("." +countName).eq(index).css('visibility','hidden');
+                $(reduceName).eq(index).css('visibility','hidden');
+                $(countName).eq(index).css('visibility','hidden');
             }else{
 
-                $("." +reduceName).eq(index).css('visibility','visible');
-                $("." +countName).eq(index).css('visibility','visible');
+                $(reduceName).eq(index).css('visibility','visible');
+                $(countName).eq(index).css('visibility','visible');
             }
         }
 
@@ -247,105 +250,106 @@
 
         }
         /*添加事件*/
-        let isChoiceServer = false;
-        $('.add_count').on('click', function (){
-            if(!isChoiceServer){
-                choiceServer();
-                isChoiceServer = true;
+  
+      $('.add_count').on('click', function (){
+        if(!isChoiceServer){
+          choiceServer();
+          isChoiceServer = true;
+        }
+        let nowIndex = $(".add_count").index(this);
+        let foodItem = JSON.parse(storage.getItem("foodItem"+nowIndex));
+        let nowCount = foodItem.count;
+        if(foodItem.sku === "0"){
+          nowCount += 1;
+          foodItem.count = nowCount;
+          storage.setItem('foodItem'+nowIndex, JSON.stringify(foodItem));
+          let foodItemNext = JSON.parse(storage.getItem('foodItem'+nowIndex));
+          $('.now_count').eq(nowIndex).text(foodItemNext.count);
+          buttonShowOrHidden(".reduce",".now_count",nowIndex);
+      
+          ShoppingListItemShowOrHidden(nowIndex);
+          ShoppingBill();  //购物车总价与数量
+        }else{
+          $('.sku-food-html').css({
+            'display':'block',
+            'height':$(document).height()+"px",
+            'background-color':'rgb(241,241,241)'
+          });
+          $('.sku-food-name').text(foodItem.foodItem);
+          $('.sku-food-peace').text(foodItem.peace);
+          $('.sku-food-count').text(foodItem.count);
+      
+          /*sku商品数量的添加*/
+          let skuFoodCount = foodItem.count;
+          $('.sku-food-addcount').on('click',function () {
+            skuFoodCount += 1;
+            $('.sku-food-count').text(skuFoodCount);
+          });
+      
+          /*sku商品数量的减少*/
+          $('.sku-food-reduce').on('click',function () {
+            let skuFoodCount = parseInt($('.sku-food-count').text());
+            skuFoodCount -= 1;
+            if(skuFoodCount <= 0){
+              skuFoodCount = 0;
             }
-            let nowIndex = $(".add_count").index(this);
-            let foodItem = JSON.parse(storage.getItem("foodItem"+nowIndex));
-            let nowCount = foodItem.count;
-            if(foodItem.sku == "0"){
-                nowCount += 1;
-                foodItem.count = nowCount;
-                storage.setItem('foodItem'+nowIndex, JSON.stringify(foodItem));
-                let foodItemNext = JSON.parse(storage.getItem('foodItem'+nowIndex));
-                $('.now_count').eq(nowIndex).text(foodItemNext.count);
-                buttonShowOrHidden("reduce","now_count",nowIndex);
-
-                ShoppingListItemShowOrHidden(nowIndex);
-                ShoppingBill();  //购物车总价与数量
+            $('.sku-food-count').text(skuFoodCount);
+          });
+          /*sku商品的选择口味*/
+          let flavorItemPic = $('.flavorItemPic');
+          flavorItemPic.on("click",function (e) {
+            let nowIndex = flavorItemPic.index(this);
+            let picSrc = flavorItemPic.eq(nowIndex).attr('class');
+            if(picSrc == 'flavorItemPic sprite sprite-noClickedRound'){
+              flavorItemPic.attr('class',"flavorItemPic sprite sprite-noClickedRound").
+              eq(nowIndex).attr('class','flavorItemPic sprite sprite-clickedRound');
+            }
+          });
+          let addDish = $('.add-dish');
+          addDish.on('click',function (e) {
+            let nowIndex = addDish.index(this);
+            let picSrc = addDish.eq(nowIndex).attr('class');
+            if(picSrc == 'add-dish sprite sprite-noClickedSquare'){
+              addDish.eq(nowIndex).attr('class','add-dish sprite sprite-clickedSquare');
             }else{
-                $('.sku-food-html').css({
-                    'display':'block',
-                    'height':$(document).height()+"px",
-                    'background-color':'rgb(241,241,241)'
-                });
-                $('.sku-food-name').text(foodItem.foodItem);
-                $('.sku-food-peace').text(foodItem.peace);
-                $('.sku-food-count').text(foodItem.count);
-
-                /*sku商品数量的添加*/
-                let skuFoodCount = foodItem.count;
-                $('.sku-food-addcount').on('click',function () {
-                    skuFoodCount += 1;
-                    $('.sku-food-count').text(skuFoodCount);
-                });
-
-                /*sku商品数量的减少*/
-                $('.sku-food-reduce').on('click',function () {
-                    let skuFoodCount = parseInt($('.sku-food-count').text());
-                    skuFoodCount -= 1;
-                    if(skuFoodCount <= 0){
-                        skuFoodCount = 0;
-                    }
-                    $('.sku-food-count').text(skuFoodCount);
-                });
-                /*sku商品的选择口味*/
-                let flavorItemPic = $('.flavorItemPic');
-                flavorItemPic.on("click",function (e) {
-                    let nowIndex = flavorItemPic.index(this);
-                    let picSrc = flavorItemPic.eq(nowIndex).attr('class');
-                    if(picSrc == 'flavorItemPic sprite sprite-noClickedRound'){
-                        flavorItemPic.attr('class',"flavorItemPic sprite sprite-noClickedRound").
-                        eq(nowIndex).attr('class','flavorItemPic sprite sprite-clickedRound');
-                    }
-                });
-                let addDish = $('.add-dish');
-                addDish.on('click',function (e) {
-                    let nowIndex = addDish.index(this);
-                    let picSrc = addDish.eq(nowIndex).attr('class');
-                    if(picSrc == 'add-dish sprite sprite-noClickedSquare'){
-                        addDish.eq(nowIndex).attr('class','add-dish sprite sprite-clickedSquare');
-                    }else{
-                        addDish.eq(nowIndex).attr('class','add-dish sprite sprite-noClickedSquare');
-                    }
-                });
-                /*点击取消，不保存sku选项*/
-                $('.time-header-back-message').on('click',function () {
-                    $('.sku-food-html').css('display','none');
-                    ShoppingBill();  //购物车总价与数量
-                });
-                /*点击确认，并保存sku的选择*/
-                $('.sure').one('click',function () {
-                    let skuFoodCount = parseInt($('.sku-food-count').text());
-                    foodItem.count = skuFoodCount;
-                    foodItem['addFood'] = "";
-                    $('.add-dish').off("click");
-                    for(let i= 0; i < flavorItemPic.length;i++){
-                        if(flavorItemPic.eq(i).attr('class') == "flavorItemPic sprite sprite-clickedRound"){
-                            foodItem['type'] = flavorItemPic.eq(i).siblings().text();
-                        }
-                    }
-                    for(let i= 0; i < $('.add-dish').length;i++){
-                        if($('.add-dish').eq(i).attr('class') == "add-dish sprite sprite-clickedSquare"){
-                            foodItem['addFood'] += " "+$('.add-dish').eq(i).siblings().text();
-                        }
-                    }
-                    storage.setItem('foodItem'+ nowIndex, JSON.stringify(foodItem));
-                    $('.sku-food-html').css('display','none');
-
-                    let foodItemNext = JSON.parse(storage.getItem('foodItem'+nowIndex));
-                    $('.now_count').eq(nowIndex).text(foodItemNext.count);
-                    buttonShowOrHidden("reduce","now_count",nowIndex);
-
-                    ShoppingListItemShowOrHidden(nowIndex);
-                    ShoppingBill();  //购物车总价与数量
-                })
+              addDish.eq(nowIndex).attr('class','add-dish sprite sprite-noClickedSquare');
             }
-
-        });
+          });
+          /*点击取消，不保存sku选项*/
+          $('.time-header-back-message').on('click',function () {
+            $('.sku-food-html').css('display','none');
+            ShoppingBill();  //购物车总价与数量
+          });
+          /*点击确认，并保存sku的选择*/
+          $('.sure').one('click',function () {
+            let skuFoodCount = parseInt($('.sku-food-count').text());
+            foodItem.count = skuFoodCount;
+            foodItem['addFood'] = "";
+            $('.add-dish').off("click");
+            for(let i= 0; i < flavorItemPic.length;i++){
+              if(flavorItemPic.eq(i).attr('class') == "flavorItemPic sprite sprite-clickedRound"){
+                foodItem['type'] = flavorItemPic.eq(i).siblings().text();
+              }
+            }
+            for(let i= 0; i < $('.add-dish').length;i++){
+              if($('.add-dish').eq(i).attr('class') == "add-dish sprite sprite-clickedSquare"){
+                foodItem['addFood'] += " "+$('.add-dish').eq(i).siblings().text();
+              }
+            }
+            storage.setItem('foodItem'+ nowIndex, JSON.stringify(foodItem));
+            $('.sku-food-html').css('display','none');
+        
+            let foodItemNext = JSON.parse(storage.getItem('foodItem'+nowIndex));
+            $('.now_count').eq(nowIndex).text(foodItemNext.count);
+            buttonShowOrHidden(".reduce",".now_count",nowIndex);
+        
+            ShoppingListItemShowOrHidden(nowIndex);
+            ShoppingBill();  //购物车总价与数量
+          })
+        }
+    
+      });
+        
 
         /*减少事件*/
         $('.reduce').on('click', function () {
@@ -357,7 +361,7 @@
             storage.setItem('foodItem'+nowIndex, JSON.stringify(foodItem));
             let foodItemNext = JSON.parse(storage.getItem('foodItem'+nowIndex));
             $('.now_count').eq(nowIndex).text(foodItemNext.count);
-            buttonShowOrHidden("reduce",'now_count',nowIndex);
+            buttonShowOrHidden(".reduce",'.now_count',nowIndex);
             ShoppingListItemShowOrHidden(nowIndex);
             ShoppingBill();  //购物车总价与数量
         });
@@ -372,7 +376,7 @@
             storage.setItem('foodItem'+nowIndex, JSON.stringify(foodItem));
             let foodItemNext = JSON.parse(storage.getItem('foodItem'+nowIndex));
             $('.now_count').eq(nowIndex).text(foodItemNext.count);
-            buttonShowOrHidden("reduceCar","numberCar",nowIndex);
+            buttonShowOrHidden(".reduceCar",".numberCar",nowIndex);
             ShoppingListItemShowOrHidden(nowIndex);
             ShoppingBill();  //购物车总价与数量
         });
@@ -388,8 +392,8 @@
             storage.setItem('foodItem'+nowIndex, JSON.stringify(foodItem));
             let foodItemNext = JSON.parse(storage.getItem('foodItem'+nowIndex));
             $('.now_count').eq(nowIndex).text(foodItemNext.count);
-            buttonShowOrHidden("reduceCar",'numberCar',nowIndex);
-            buttonShowOrHidden("reduce",'now_count',nowIndex);
+            buttonShowOrHidden(".reduceCar",'.numberCar',nowIndex);
+            buttonShowOrHidden(".reduce",'.now_count',nowIndex);
             ShoppingListItemShowOrHidden(nowIndex);
             ShoppingBill();  //购物车总价与数量
         });
